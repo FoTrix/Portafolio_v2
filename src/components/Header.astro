@@ -1,0 +1,315 @@
+---
+import { Icon } from "astro-icon/components";
+
+
+
+const iconsObject = [
+  {
+    name: "catppuccin:javascript",
+    size: "70",
+    position: "top-[15%] left-[10%]",
+    depth: "0.5",
+    opacity: "text-white/10",
+  },
+  {
+    name: "catppuccin:astro",
+    size: "85",
+    position: "bottom-[20%] right-[15%]",
+    depth: "0.3",
+    opacity: "text-white/10",
+  },
+  {
+    name: "catppuccin:javascript-react",
+    size: "73",
+    position: "top-[60%] right-[25%]",
+    depth: "0.6",
+    opacity: "text-white/10",
+  },
+  {
+    name: "catppuccin:html",
+    size: "55",
+    position: "bottom-[40%] left-[20%]",
+    depth: "0.4",
+    opacity: "text-white/10",
+  },
+
+  {
+    name: "catppuccin:css",
+    size: "24",
+    position: "top-[30%] left-[30%]",
+    depth: "0.7",
+    opacity: "text-white/15",
+  },
+  {
+    name: "catppuccin:typescript",
+    size: "64",
+    position: "bottom-[10%] right-[30%]",
+    depth: "0.5",
+    opacity: "text-white/15",
+  },
+  {
+    name: "catppuccin:tailwind",
+    size: "71",
+    position: "top-[45%] right-[10%]",
+    depth: "0.4",
+    opacity: "text-white/15",
+  },
+
+  // Iconos pequeños
+  {
+    name: "catppuccin:git",
+    size: "70",
+    position: "top-[10%] right-[40%]",
+    depth: "0.8",
+    opacity: "text-white/20",
+  },
+  {
+    name: "logos:github-icon",
+    size: "60",
+    position: "bottom-[15%] left-[40%]",
+    depth: "0.9",
+    opacity: "text-white/20",
+  },
+  {
+    name: "catppuccin:vscode",
+    size: "65",
+    position: "top-[70%] left-[5%]",
+    depth: "0.7",
+    opacity: "text-white/20",
+  },
+  {
+    name: "logos:nodejs-icon",
+    size: "40",
+    position: "top-[20%] right-[5%]",
+    depth: "0.6",
+    opacity: "text-white/20",
+  },
+  {
+    name: "catppuccin:npm",
+    size: "70",
+    position: "bottom-[10%] right-[45%]",
+    depth: "0.8",
+    opacity: "text-white/20",
+  },
+  {
+    name: "catppuccin:vercel",
+    size: "73",
+    position: "top-[40%] left-[45%]",
+    depth: "0.5",
+    opacity: "text-white/20",
+  },
+  {
+    name: "catppuccin:netlify",
+    size: "57",
+    position: "bottom-[30%] right-[50%]",
+    depth: "0.9",
+    opacity: "text-white/20",
+  },
+];
+---
+
+<header
+  class="relative border-amber-500 border-2 h-[700px] flex items-center justify-center overflow-hidden text-focus-in"
+>
+  <div
+    class="container p-4 rounded-4xl mx-auto px-4 sm:px-6 md:px-10 py-6 sm:py-8 md:py-20 z-10 relative grid grid-cols-1 md:grid-cols-2 gap-8 place-items-center"
+  >
+    <div class="text-center md:text-left">
+      <h1 class="text-4xl sm:text-5xl md:text-7xl font-bold mb-4 sm:mb-6">
+        <span>Hi there!</span>
+        <span class="block text-blue-700 text-shadow-lg">I'm Daniel Uribe</span>
+      </h1>
+      <p
+        class="text-lg sm:text-xl md:text-2xl font-bold mb-6 sm:mb-8 w-fit mx-auto md:mx-0 text-gray-500 drop-shadow-lg border-b-4 border-amber-400"
+      >
+        Full-Stack Developer
+      </p>
+      <p class=" font-bold text-base text-gray-500 sm:text-[1.0rem]">
+        <!-- aca quiero agregar un icono mas -->
+        
+      </p>
+    </div>
+    <div class="grid place-items-center relative">
+      <div
+        id="avatar"
+        class="overflow-hidden rounded-[50%] size-64 sm:size-72 md:size-80 bg-blue-300"
+      >
+        <img
+          src="/avatar.png"
+          alt="avatar"
+          class="object-cover mx-auto h-full sombra"
+        />
+      </div>
+      <div 
+        class="absolute top-[76%] left-[85%] w-fit bg-white border border-gray-500 p-2 rounded-lg shadow-md before:content-[''] before:absolute before:-left-4 before:top-4 before:border-8 before:border-transparent before:border-r-white"
+      >
+        <p class="text-black text-sm">👨🏻‍💻</p>
+      </div>
+    </div>
+    
+  </div>
+
+  <div class="absolute  inset-0 z-0 hidden md:block" id="parallax-container">
+    {
+      iconsObject.map((icon) => (
+        <div
+          class={`parallax-element absolute ${icon.position}`}
+          data-depth={icon.depth}
+        >
+          <Icon name={icon.name} class={icon.opacity} size={icon.size} />
+        </div>
+      ))
+    }
+  </div>
+</header>
+
+<script>
+  document.addEventListener("DOMContentLoaded", () => {
+    const header = document.querySelector("header");
+    const parallaxContainer = document.getElementById("parallax-container");
+    const elements = document.querySelectorAll(".parallax-element");
+    const poster = document.getElementById("avatar");
+
+    const width: any = poster?.clientWidth;
+    const height: any = poster?.clientHeight;
+
+    poster?.addEventListener("mousemove", (e) => {
+      const { layerX, layerY } = e;
+
+      const xRotation = ((layerY - width / 2) / width) * 10;
+      const yRotation = ((layerX - width / 2) / width) * 10;
+
+      const string = `
+      perspective(800px)
+      scale(1.05)
+      rotateX(${xRotation}deg)
+      rotateY(${yRotation}deg)`
+
+      poster.style.transform = string;
+    });
+
+    poster?.addEventListener("mouseout", () => {
+      poster.style.transform = `
+      perspective(500px)
+      scale(1)
+      rotateX(0)
+      rotateY(0)`
+    })
+
+    if (!elements.length || !parallaxContainer || window.innerWidth < 768) {
+      return;
+    }
+
+    let windowWidth = window.innerWidth;
+    let windowHeight = window.innerHeight;
+
+    function updateParallaxEffect(e: any) {
+      const { clientX: mouseX, clientY: mouseY } = e;
+
+      const centerX = windowWidth / 2;
+      const centerY = windowHeight / 2;
+
+      const percentX = (mouseX - centerX) / centerX;
+      const percentY = (mouseY - centerY) / centerY;
+
+      elements.forEach((element: any) => {
+        const depth = parseFloat(element.getAttribute("data-depth")) || 0.1;
+        const moveX = percentX * depth * 100;
+        const moveY = percentY * depth * 100;
+
+        element.style.transform = `translate(${moveX}px, ${moveY}px)`;
+      });
+    }
+
+    function resetPositions() {
+      elements.forEach((element: any) => {
+        element.style.transition = "transform 0.5s ease-out";
+        element.style.transform = "translate(0px, 0px)";
+
+        setTimeout(() => {
+          element.style.transition = "transform 0.1s ease-out";
+        }, 500);
+      });
+    }
+
+    function updateDimensions() {
+      windowWidth = window.innerWidth;
+      windowHeight = window.innerHeight;
+
+      if (windowWidth < 768) {
+        parallaxContainer?.classList.add("hidden");
+        parallaxContainer?.classList.remove("block");
+
+        window.removeEventListener("mousemove", updateParallaxEffect);
+        header?.removeEventListener("mouseleave", resetPositions);
+      } else {
+        parallaxContainer?.classList.remove("hidden");
+        parallaxContainer?.classList.add("block");
+
+        window.addEventListener("mousemove", updateParallaxEffect);
+        header?.addEventListener("mouseleave", resetPositions);
+      }
+    }
+
+    updateDimensions();
+
+    window.addEventListener("resize", updateDimensions);
+
+    return () => {
+      window.removeEventListener("mousemove", updateParallaxEffect);
+      window.removeEventListener("resize", updateDimensions);
+      header?.removeEventListener("mouseleave", resetPositions);
+    };
+  });
+</script>
+
+<style>
+  .parallax-element {
+    will-change: transform;
+    transition: transform 0.1s ease-out;
+  }
+  .sombra {
+    filter: drop-shadow(0 0 10px rgba(0, 0, 0, 0.8));
+    user-drag: none;
+    -webkit-user-drag: none;
+    user-select: none;
+    -moz-user-select: none;
+  }
+
+  #avatar {
+    transition: transform 0.3s ease-out;
+  }
+  
+   .text-focus-in {
+	-webkit-animation: text-focus-in 500ms cubic-bezier(0.550, 0.085, 0.680, 0.530) both;
+	        animation: text-focus-in 500ms cubic-bezier(0.550, 0.085, 0.680, 0.530) both;
+}
+
+
+ @-webkit-keyframes text-focus-in {
+  0% {
+    -webkit-filter: blur(12px);
+            filter: blur(12px);
+    opacity: 0;
+  }
+  100% {
+    -webkit-filter: blur(0px);
+            filter: blur(0px);
+    opacity: 1;
+  }
+}
+@keyframes text-focus-in {
+  0% {
+    -webkit-filter: blur(12px);
+            filter: blur(12px);
+    opacity: 0;
+  }
+  100% {
+    -webkit-filter: blur(0px);
+            filter: blur(0px);
+    opacity: 1;
+  }
+}
+
+
+</style>
