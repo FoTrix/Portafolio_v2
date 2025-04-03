@@ -17,6 +17,7 @@
     "tailwindcss": "^4.1.1"
   },
   "devDependencies": {
+    "@iconify-json/ant-design": "^1.2.5",
     "@iconify-json/catppuccin": "^1.2.10",
     "@iconify-json/logos": "^1.2.4",
     "@iconify/json": "^2.2.323"

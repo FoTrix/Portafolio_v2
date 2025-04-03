@@ -109,30 +109,41 @@ const iconsObject = [
 ---
 
 <header
-  class="relative border-amber-500 border-2 h-[700px] flex items-center justify-center overflow-hidden text-focus-in"
+  class="relative border-amber-500 border-2 h-screen flex items-center justify-center overflow-hidden text-focus-in"
 >
   <div
     class="container p-4 rounded-4xl mx-auto px-4 sm:px-6 md:px-10 py-6 sm:py-8 md:py-20 z-10 relative grid grid-cols-1 md:grid-cols-2 gap-8 place-items-center"
   >
     <div class="text-center md:text-left">
       <h1 class="text-4xl sm:text-5xl md:text-7xl font-bold mb-4 sm:mb-6">
-        <span>Hi there!</span>
+        <span class="text-3xl sm:text-4xl md:text-5xl">Hi there!</span>
         <span class="block text-blue-700 text-shadow-lg">I'm Daniel Uribe</span>
       </h1>
       <p
-        class="text-lg sm:text-xl md:text-2xl font-bold mb-6 sm:mb-8 w-fit mx-auto md:mx-0 text-gray-500 drop-shadow-lg border-b-4 border-amber-400"
+        class="text-lg sm:text-xl md:text-2xl font-mono font-medium uppercase mb-6 sm:mb-8 w-fit mx-auto md:mx-0 text-gray-600 drop-shadow-lg underline decoration-amber-500 underline-offset-5"
       >
         Full-Stack Developer
       </p>
-      <p class=" font-bold text-base text-gray-500 sm:text-[1.0rem]">
-        <!-- aca quiero agregar un icono mas -->
-        
+      <p class="font-bold text-base text-gray-500 sm:text-[1.0rem] mb-6">
+        <a 
+          href="/Daniel-Ignacio-Uribe-Pulgar-CV.pdf" 
+          download 
+          class="group inline-flex items-center gap-2 bg-gradient-to-r from-blue-600 to-blue-700 hover:from-blue-700 hover:to-blue-800 text-white font-bold py-3 px-6 rounded-lg transform hover:scale-105 transition-all duration-300 shadow-lg hover:shadow-xl focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-opacity-50 active:scale-95 overflow-hidden relative"
+        >
+          <span class="absolute inset-0 w-full h-full bg-white opacity-0 group-hover:opacity-10 transition-opacity duration-300"></span>
+          <Icon name="ant-design:cloud-download-outlined" size="20" class="group-hover:rotate-12 transition-transform duration-300" />
+          <span class="relative z-10">Descargar CV</span>
+          <span class="relative flex h-3 w-3">
+            <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-green-600 opacity-75"></span>
+            <span class="relative inline-flex rounded-full h-3 w-3 bg-green-600"></span>
+          </span>
+        </a>
       </p>
     </div>
     <div class="grid place-items-center relative">
       <div
         id="avatar"
-        class="overflow-hidden rounded-[50%] size-64 sm:size-72 md:size-80 bg-blue-300"
+        class="overflow-hidden rounded-[50%] size-64 sm:size-72 md:size-80 bg-blue-300 transform transition-all duration-300 ease-in-out hover:shadow-2xl"
       >
         <img
           src="/avatar.png"
@@ -140,8 +151,8 @@ const iconsObject = [
           class="object-cover mx-auto h-full sombra"
         />
       </div>
-      <div 
-        class="absolute top-[76%] left-[85%] w-fit bg-white border border-gray-500 p-2 rounded-lg shadow-md before:content-[''] before:absolute before:-left-4 before:top-4 before:border-8 before:border-transparent before:border-r-white"
+      <div
+        class="absolute top-[76%] left-[85%] bg-white w-fit border border-gray-500 p-2 rounded-lg shadow-md before:content-[''] before:absolute before:-left-4 before:top-4 before:border-8 before:border-transparent before:border-r-white"
       >
         <p class="text-black text-sm">👨🏻‍💻</p>
       </div>

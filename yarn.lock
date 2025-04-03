@@ -248,6 +248,13 @@
   resolved "https://registry.yarnpkg.com/@esbuild/win32-x64/-/win32-x64-0.25.1.tgz#7d79922cb2d88f9048f06393dbf62d2e4accb584"
   integrity sha512-Y1EQdcfwMSeQN/ujR5VayLOJ1BHaK+ssyk0AEzPjC+t1lITgsnccPqFjb6V+LsTp/9Iov4ysfjxLaGJ9RPtkVg==
 
+"@iconify-json/ant-design@^1.2.5":
+  version "1.2.5"
+  resolved "https://registry.yarnpkg.com/@iconify-json/ant-design/-/ant-design-1.2.5.tgz#ae6d59a36eb19e19299eaa3f8377a8f3854c38c2"
+  integrity sha512-SYxhrx1AFq2MBcXk77AERYz2mPhLQes1F0vtvG64+dJZWyge9studXo7MiR8PPeLjRjZdWRrReRbxiwdRMf70Q==
+  dependencies:
+    "@iconify/types" "*"
+
 "@iconify-json/catppuccin@^1.2.10":
   version "1.2.10"
   resolved "https://registry.yarnpkg.com/@iconify-json/catppuccin/-/catppuccin-1.2.10.tgz#42e822e66f1d0b42b9225b74d143a2587be35428"
