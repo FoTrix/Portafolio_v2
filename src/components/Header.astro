@@ -1,136 +1,32 @@
 ---
 import { Icon } from "astro-icon/components";
+import { iconsFloat, socialLinks} from "../data/dataHeader.json"
 
 
-
-const iconsObject = [
-  {
-    name: "catppuccin:javascript",
-    size: "70",
-    position: "top-[15%] left-[10%]",
-    depth: "0.5",
-    opacity: "text-white/10",
-  },
-  {
-    name: "catppuccin:astro",
-    size: "85",
-    position: "bottom-[20%] right-[15%]",
-    depth: "0.3",
-    opacity: "text-white/10",
-  },
-  {
-    name: "catppuccin:javascript-react",
-    size: "73",
-    position: "top-[60%] right-[25%]",
-    depth: "0.6",
-    opacity: "text-white/10",
-  },
-  {
-    name: "catppuccin:html",
-    size: "55",
-    position: "bottom-[40%] left-[20%]",
-    depth: "0.4",
-    opacity: "text-white/10",
-  },
-
-  {
-    name: "catppuccin:css",
-    size: "24",
-    position: "top-[30%] left-[30%]",
-    depth: "0.7",
-    opacity: "text-white/15",
-  },
-  {
-    name: "catppuccin:typescript",
-    size: "64",
-    position: "bottom-[10%] right-[30%]",
-    depth: "0.5",
-    opacity: "text-white/15",
-  },
-  {
-    name: "catppuccin:tailwind",
-    size: "71",
-    position: "top-[45%] right-[10%]",
-    depth: "0.4",
-    opacity: "text-white/15",
-  },
-
-  // Iconos pequeños
-  {
-    name: "catppuccin:git",
-    size: "70",
-    position: "top-[10%] right-[40%]",
-    depth: "0.8",
-    opacity: "text-white/20",
-  },
-  {
-    name: "logos:github-icon",
-    size: "60",
-    position: "bottom-[15%] left-[40%]",
-    depth: "0.9",
-    opacity: "text-white/20",
-  },
-  {
-    name: "catppuccin:vscode",
-    size: "65",
-    position: "top-[70%] left-[5%]",
-    depth: "0.7",
-    opacity: "text-white/20",
-  },
-  {
-    name: "logos:nodejs-icon",
-    size: "40",
-    position: "top-[20%] right-[5%]",
-    depth: "0.6",
-    opacity: "text-white/20",
-  },
-  {
-    name: "catppuccin:npm",
-    size: "70",
-    position: "bottom-[10%] right-[45%]",
-    depth: "0.8",
-    opacity: "text-white/20",
-  },
-  {
-    name: "catppuccin:vercel",
-    size: "73",
-    position: "top-[40%] left-[45%]",
-    depth: "0.5",
-    opacity: "text-white/20",
-  },
-  {
-    name: "catppuccin:netlify",
-    size: "57",
-    position: "bottom-[30%] right-[50%]",
-    depth: "0.9",
-    opacity: "text-white/20",
-  },
-];
 ---
 
-<header
-  class="relative border-amber-500 border-2 h-screen flex items-center justify-center overflow-hidden text-focus-in"
+<section
+  id="header-section"
+  class="relative h-screen grid place-content-center text-focus-in scroll-smooth w-full"
 >
   <div
     class="container p-4 rounded-4xl mx-auto px-4 sm:px-6 md:px-10 py-6 sm:py-8 md:py-20 z-10 relative grid grid-cols-1 md:grid-cols-2 gap-8 place-items-center"
   >
     <div class="text-center md:text-left">
       <h1 class="text-4xl sm:text-5xl md:text-7xl font-bold mb-4 sm:mb-6">
-        <span class="text-3xl sm:text-4xl md:text-5xl">Hi there!</span>
+        <span class="text-3xl sm:text-4xl md:text-5xl">Hi there! 🚀</span>
         <span class="block text-blue-700 text-shadow-lg">I'm Daniel Uribe</span>
       </h1>
       <p
-        class="text-lg sm:text-xl md:text-2xl font-mono font-medium uppercase mb-6 sm:mb-8 w-fit mx-auto md:mx-0 text-gray-600 drop-shadow-lg underline decoration-amber-500 underline-offset-5"
+        class="text-lg sm:text-xl md:text-2xl font-mono font-medium uppercase mb-6 sm:mb-8 w-fit mx-auto md:mx-0 text-gray-600 text-shadow-lg underline decoration-amber-500 underline-offset-5"
       >
         Full-Stack Developer
       </p>
-      <p class="font-bold text-base text-gray-500 sm:text-[1.0rem] mb-6">
         <a 
           href="/Daniel-Ignacio-Uribe-Pulgar-CV.pdf" 
           download 
           class="group inline-flex items-center gap-2 bg-gradient-to-r from-blue-600 to-blue-700 hover:from-blue-700 hover:to-blue-800 text-white font-bold py-3 px-6 rounded-lg transform hover:scale-105 transition-all duration-300 shadow-lg hover:shadow-xl focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-opacity-50 active:scale-95 overflow-hidden relative"
         >
-          <span class="absolute inset-0 w-full h-full bg-white opacity-0 group-hover:opacity-10 transition-opacity duration-300"></span>
           <Icon name="ant-design:cloud-download-outlined" size="20" class="group-hover:rotate-12 transition-transform duration-300" />
           <span class="relative z-10">Descargar CV</span>
           <span class="relative flex h-3 w-3">
@@ -138,12 +34,11 @@ const iconsObject = [
             <span class="relative inline-flex rounded-full h-3 w-3 bg-green-600"></span>
           </span>
         </a>
-      </p>
     </div>
     <div class="grid place-items-center relative">
       <div
         id="avatar"
-        class="overflow-hidden rounded-[50%] size-64 sm:size-72 md:size-80 bg-blue-300 transform transition-all duration-300 ease-in-out hover:shadow-2xl"
+        class="overflow-hidden rounded-[50%] size-64 sm:size-72 md:size-80 bg-blue-300 drop-shadow-xl transform transition-shadow duration-300 ease hover:drop-shadow-2xl"
       >
         <img
           src="/avatar.png"
@@ -151,34 +46,59 @@ const iconsObject = [
           class="object-cover mx-auto h-full sombra"
         />
       </div>
+      <!-- redes sociales -->
+     {
+      socialLinks.map(social => {
+        const { icon, url, iconClasses, parentClasses } = social;
+        return (
       <div
-        class="absolute top-[76%] left-[85%] bg-white w-fit border border-gray-500 p-2 rounded-lg shadow-md before:content-[''] before:absolute before:-left-4 before:top-4 before:border-8 before:border-transparent before:border-r-white"
+        class={parentClasses}
       >
-        <p class="text-black text-sm">👨🏻‍💻</p>
+        <a 
+        href={url}
+        target="_blank"
+        >
+        <Icon
+        name={icon}
+        size="25"
+        class={iconClasses}
+        />
+        </a>
       </div>
+        )
+      })
+     }
+
     </div>
-    
   </div>
 
-  <div class="absolute  inset-0 z-0 hidden md:block" id="parallax-container">
+  <div class="absolute overflow-hidden inset-0 z-0 hidden md:block" id="parallax-container">
     {
-      iconsObject.map((icon) => (
-        <div
-          class={`parallax-element absolute ${icon.position}`}
-          data-depth={icon.depth}
-        >
-          <Icon name={icon.name} class={icon.opacity} size={icon.size} />
+      iconsFloat.map((icon) => (
+        <div class="icon-wrapper absolute" style={`top: 0; left: 0; ${icon.position.includes('top') ? `top: ${icon.position.match(/top-\[([^%]+)%\]/)[1]}%` : ''};
+        ${icon.position.includes('bottom') ? `top: ${100 - parseInt(icon.position.match(/bottom-\[([^%]+)%\]/)[1])}%` : ''};
+        ${icon.position.includes('left') ? `left: ${icon.position.match(/left-\[([^%]+)%\]/)[1]}%` : ''};
+        ${icon.position.includes('right') ? `left: ${100 - parseInt(icon.position.match(/right-\[([^%]+)%\]/)[1])}%` : ''};`}>
+          <div
+            class="parallax-element"
+            data-depth={icon.depth}
+          >
+            <div class="floating-icon" style={`animation-delay: ${icon.delay}s`}>
+              <Icon name={icon.name} class={icon.opacity} size={icon.size} />
+            </div>
+          </div>
         </div>
       ))
     }
   </div>
-</header>
+</section>
 
 <script>
   document.addEventListener("DOMContentLoaded", () => {
-    const header = document.querySelector("header");
+    const header = document.getElementById("header-section");
     const parallaxContainer = document.getElementById("parallax-container");
     const elements = document.querySelectorAll(".parallax-element");
+    const headerContent = document.querySelector(".container");
     const poster = document.getElementById("avatar");
 
     const width: any = poster?.clientWidth;
@@ -223,22 +143,28 @@ const iconsObject = [
       const percentX = (mouseX - centerX) / centerX;
       const percentY = (mouseY - centerY) / centerY;
 
-      elements.forEach((element: any) => {
-        const depth = parseFloat(element.getAttribute("data-depth")) || 0.1;
+      elements.forEach((element: Element) => {
+        if (!(element instanceof HTMLElement)) return;
+        
+        const depth = parseFloat(element.getAttribute("data-depth") || "0.1");
         const moveX = percentX * depth * 100;
         const moveY = percentY * depth * 100;
-
+        
         element.style.transform = `translate(${moveX}px, ${moveY}px)`;
       });
     }
 
     function resetPositions() {
-      elements.forEach((element: any) => {
+      elements.forEach((element: Element) => {
+        if (!(element instanceof HTMLElement)) return;
+        
         element.style.transition = "transform 0.5s ease-out";
         element.style.transform = "translate(0px, 0px)";
 
         setTimeout(() => {
-          element.style.transition = "transform 0.1s ease-out";
+          if (element instanceof HTMLElement) {
+            element.style.transition = "transform 0.1s ease-out";
+          }
         }, 500);
       });
     }
@@ -266,9 +192,39 @@ const iconsObject = [
 
     window.addEventListener("resize", updateDimensions);
 
+    // Definimos la función de scroll 3D para el header
+    const handleScroll = () => {
+      if (!header) return;
+      
+      const scrollPosition = window.scrollY;
+      const headerHeight = header.offsetHeight;
+      const scrollProgress = Math.min(scrollPosition / (headerHeight * 0.5), 1);
+      
+      // Aplicar transformación 3D basada en el scroll SOLO al contenedor principal
+      if (headerContent && headerContent instanceof HTMLElement) {
+        const rotateX = scrollProgress * 40; // Rotación máxima de 15 grados
+        const translateZ = scrollProgress * -100; // Efecto de profundidad
+        const scale = 1 - (scrollProgress * 0.15); // Reducción de escala sutil
+        const opacity = 1 - (scrollProgress * 0.5); // Reducción de opacidad
+        
+        headerContent.style.transform = `
+          perspective(1000px) 
+          rotateX(${rotateX}deg) 
+          translateZ(${translateZ}px) 
+          scale(${scale})
+        `;
+        headerContent.style.opacity = opacity.toString();
+      }
+    };
+    
+    // Inicializar el efecto de scroll
+    window.addEventListener("scroll", handleScroll);
+    handleScroll(); // Aplicar el efecto inicial
+
     return () => {
       window.removeEventListener("mousemove", updateParallaxEffect);
       window.removeEventListener("resize", updateDimensions);
+      window.removeEventListener("scroll", handleScroll);
       header?.removeEventListener("mouseleave", resetPositions);
     };
   });
@@ -277,8 +233,41 @@ const iconsObject = [
 <style>
   .parallax-element {
     will-change: transform;
-    transition: transform 0.1s ease-out;
+    transition: transform 0.2s ease-out;
+    position: absolute;
+    transform-origin: center center;
   }
+  
+  /* Estilo para el contenedor principal con perspectiva 3D */
+  #header-section .container {
+    transform-style: preserve-3d;
+    transition: transform 0.3s ease-out, opacity 0.3s ease-out;
+    will-change: transform, opacity;
+  }
+  
+  .icon-wrapper {
+    position: absolute;
+    transform-style: preserve-3d;
+  }
+  
+  /* Efecto de levitación para los iconos */
+  .floating-icon {
+    animation: floating 6s ease-in-out infinite;
+    transform-style: preserve-3d;
+  }
+  
+  @keyframes floating {
+    0% {
+      transform: translateY(0px);
+    }
+    50% {
+      transform: translateY(-15px);
+    }
+    100% {
+      transform: translateY(0px);
+    }
+  }
+  
   .sombra {
     filter: drop-shadow(0 0 10px rgba(0, 0, 0, 0.8));
     user-drag: none;
@@ -291,36 +280,34 @@ const iconsObject = [
     transition: transform 0.3s ease-out;
   }
   
-   .text-focus-in {
-	-webkit-animation: text-focus-in 500ms cubic-bezier(0.550, 0.085, 0.680, 0.530) both;
-	        animation: text-focus-in 500ms cubic-bezier(0.550, 0.085, 0.680, 0.530) both;
-}
-
-
- @-webkit-keyframes text-focus-in {
-  0% {
-    -webkit-filter: blur(12px);
-            filter: blur(12px);
-    opacity: 0;
+  .text-focus-in {
+    -webkit-animation: text-focus-in .7s cubic-bezier(0.550, 0.085, 0.680, 0.530) both;
+    animation: text-focus-in .7s cubic-bezier(0.550, 0.085, 0.680, 0.530) both;
   }
-  100% {
-    -webkit-filter: blur(0px);
-            filter: blur(0px);
-    opacity: 1;
-  }
-}
-@keyframes text-focus-in {
-  0% {
-    -webkit-filter: blur(12px);
-            filter: blur(12px);
-    opacity: 0;
-  }
-  100% {
-    -webkit-filter: blur(0px);
-            filter: blur(0px);
-    opacity: 1;
-  }
-}
 
-
+  @-webkit-keyframes text-focus-in {
+    0% {
+      -webkit-filter: blur(12px);
+      filter: blur(12px);
+      opacity: 0;
+    }
+    100% {
+      -webkit-filter: blur(0px);
+      filter: blur(0px);
+      opacity: 1;
+    }
+  }
+  
+  @keyframes text-focus-in {
+    0% {
+      -webkit-filter: blur(12px);
+      filter: blur(12px);
+      opacity: 0;
+    }
+    100% {
+      -webkit-filter: blur(0px);
+      filter: blur(0px);
+      opacity: 1;
+    }
+  }
 </style>

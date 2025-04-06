@@ -1,1 +1,14 @@
 @import "tailwindcss";
+
+/* * {
+    @apply border-2 border-amber-400;
+} */
+
+@layer base {
+    :root {
+        scroll-behavior: smooth;
+    }
+}
+
+
+

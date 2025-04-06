@@ -10,9 +10,8 @@
   },
   "dependencies": {
     "@astrojs/netlify": "^6.2.5",
-    "@tailwindcss/vite": "^4.1.1",
-    "animejs": "^3.2.2",
-    "astro": "^5.5.6",
+    "@tailwindcss/vite": "^4.1.2",
+    "astro": "^5.6.0",
     "astro-icon": "^1.1.5",
     "tailwindcss": "^4.1.1"
   },
@@ -20,6 +19,9 @@
     "@iconify-json/ant-design": "^1.2.5",
     "@iconify-json/catppuccin": "^1.2.10",
     "@iconify-json/logos": "^1.2.4",
-    "@iconify/json": "^2.2.323"
+    "@iconify-json/simple-icons": "^1.2.30",
+    "@iconify/json": "^2.2.323",
+    "prettier": "3.5.3",
+    "prettier-plugin-astro": "0.14.1"
   }
 }
