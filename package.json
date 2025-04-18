@@ -9,18 +9,36 @@
     "astro": "astro"
   },
   "dependencies": {
-    "@astrojs/netlify": "^6.2.5",
-    "@tailwindcss/vite": "^4.1.2",
-    "astro": "^5.6.0",
+    "@astrojs/netlify": "^6.3.0",
+    "@astrojs/react": "^4.2.4",
+    "@iconify-json/skill-icons": "^1.2.0",
+    "@lucide/astro": "^0.488.0",
+    "@tailwindcss/postcss": "^4.1.4",
+    "@tailwindcss/vite": "^4.1.4",
+    "@types/react": "^19.1.2",
+    "@types/react-dom": "^19.1.2",
+    "astro": "^5.7.2",
     "astro-icon": "^1.1.5",
-    "tailwindcss": "^4.1.1"
+    "class-variance-authority": "^0.7.1",
+    "clsx": "^2.1.1",
+    "framer-motion": "^12.7.4",
+    "lucide-react": "^0.488.0",
+    "motion": "^12.7.4",
+    "react": "^19.1.0",
+    "react-dom": "^19.1.0",
+    "tailwind-merge": "^3.2.0",
+    "tailwindcss": "^4.1.4",
+    "tw-animate-css": "^1.2.5"
   },
   "devDependencies": {
     "@iconify-json/ant-design": "^1.2.5",
     "@iconify-json/catppuccin": "^1.2.10",
     "@iconify-json/logos": "^1.2.4",
     "@iconify-json/simple-icons": "^1.2.30",
+    "@iconify-json/vscode-icons": "^1.2.19",
     "@iconify/json": "^2.2.323",
+    "autoprefixer": "^10.4.21",
+    "postcss": "^8.5.3",
     "prettier": "3.5.3",
     "prettier-plugin-astro": "0.14.1"
   }

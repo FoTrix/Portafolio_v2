@@ -1,0 +1,125 @@
+--- 
+import { Icon } from "astro-icon/components";
+import { skills } from "../../data/dataSkill.json"
+---
+
+
+<div class="shadow-scroll w-full h-40" id="skill-section">
+
+  <article class="wrapper">
+    {
+      skills.map(skill => {
+        const { iconName, className } = skill;
+        return (
+          <div class={className}><Icon size="50" name={iconName}/></div>
+        )
+      })
+    }
+  </article>
+
+  
+
+  <style>
+    .item {
+      width: 200px;
+      height: 100px;
+      background: rgb(17, 16, 16);
+      border-radius: 6px;
+      position: absolute;
+      overflow-y: visible;
+      left: max(calc(200px * 16), 100%);
+      animation-name: scrollLeft;
+      animation-duration: 30s;
+      animation-timing-function: linear;
+      animation-iteration-count: infinite;
+    }
+
+    .shadow-scroll {
+      filter: drop-shadow(
+        0 10px 30px rgba(13, 7, 64, 0.8)
+      );
+    }
+ 
+
+
+    /* 
+      This animation creates an infinite scroll effect with 8 items.
+      Each item has a calculated delay based on its position:
+      - Total animation duration is 30s
+      - Items are evenly spaced using (30s / 8) as the base delay
+      - (8 - n) determines each item's position in the sequence
+      - The -1 multiplier makes items move from right to left
+    */
+    .item1 {
+      animation-delay: calc(30s / 16 * (16 - 1) * -1);
+    }
+    .item2 {
+      animation-delay: calc(30s / 16 * (16 - 2) * -1);
+    }
+    .item3 {
+      animation-delay: calc(30s / 16 * (16 - 3) * -1);
+    }
+    .item4 {
+      animation-delay: calc(30s / 16 * (16 - 4) * -1);
+    }
+    .item5 {
+      animation-delay: calc(30s / 16 * (16 - 5) * -1);
+    }
+    .item6 {
+      animation-delay: calc(30s / 16 * (16 - 6) * -1);
+    }
+    .item7 {
+      animation-delay: calc(30s / 16 * (16 - 7) * -1);
+    }
+    .item8 {
+      animation-delay: calc(30s / 16 * (16 - 8) * -1);
+    }
+    .item9 {
+      animation-delay: calc(30s / 16 * (16 - 9) * -1);
+    }
+    .item10 {
+      animation-delay: calc(30s / 16 * (16 - 10) * -1);
+    }
+    .item11 {
+      animation-delay: calc(30s / 16 * (16 - 11) * -1);
+    }
+    .item12 {
+      animation-delay: calc(30s / 16 * (16 - 12) * -1);
+    }
+    .item13 {
+      animation-delay: calc(30s / 16 * (16 - 13) * -1);
+    }
+    .item14 {
+      animation-delay: calc(30s / 16 * (16 - 14) * -1);
+    }
+    .item15 {
+      animation-delay: calc(30s / 16 * (16 - 15) * -1);
+    }
+    .item16 {
+      animation-delay: calc(30s / 16 * (16 - 16) * -1);
+    }
+
+
+    @keyframes scrollLeft {
+      to {
+        left: -200px;
+      }
+    }
+
+    .wrapper{
+      width: 90%;
+      box-shadow: 0 100px 50px rgba(0, 0, 0, 0.8);
+      margin-inline: auto;
+      max-width: 1536px;
+      position: relative;
+      height: 100px;
+      overflow: hidden;
+      mask-image: linear-gradient(
+        to right,
+          rgba(0, 0, 0, 0),
+        rgba(0, 0, 0, 1) 20%,
+        rgba(0, 0, 0, 1) 80%,
+        rgba(0, 0, 0, 0)
+      );
+    }
+  </style>

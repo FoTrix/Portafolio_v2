@@ -1,0 +1,163 @@
+---
+import { Icon } from "astro-icon/components";
+import { iconsFloat, socialLinks} from "../../data/dataHeader.json"
+---
+
+<section
+  id="header-section"
+  class="relative h-screen grid place-content-center text-focus-in w-full"
+>
+
+  <div
+    class="container p-4 rounded-4xl mx-auto px-4 sm:px-6 md:px-10 py-6 sm:py-8 md:py-20 z-10 relative grid grid-cols-1 md:grid-cols-2 gap-8 place-items-center"
+  >
+    <div class="text-center md:text-left cuadricula">
+      <h1 class="text-4xl sm:text-5xl md:text-7xl font-bold mb-4 sm:mb-6">
+        <span class="text-3xl sm:text-4xl md:text-5xl">👋🏻 Hi there!</span>
+        <span class="block text-blue-700 text-shadow-lg">I'm Daniel Uribe</span>
+      </h1>
+      <p
+        class="text-lg sm:text-xl md:text-2xl font-mono font-medium uppercase mb-6 sm:mb-8 w-fit mx-auto md:mx-0 text-gray-600 text-shadow-lg underline decoration-amber-500 underline-offset-5"
+      >
+        Full-Stack Developer
+      </p>
+        <a 
+          href="/Daniel-Ignacio-Uribe-Pulgar-CV.pdf" 
+          download 
+          class="group inline-flex items-center gap-2 bg-gradient-to-r from-blue-600 to-blue-700 hover:from-blue-700 hover:to-blue-800 text-white font-bold py-3 px-6 rounded-lg transform hover:scale-105 transition-all duration-300 shadow-lg hover:shadow-xl focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-opacity-50 active:scale-95 overflow-hidden relative"
+        >
+          <Icon name="ant-design:cloud-download-outlined" size="20" class="group-hover:rotate-12 transition-transform duration-300" />
+          <span class="relative z-10">Descargar CV</span>
+          <span class="relative flex h-3 w-3">
+            <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-green-600 opacity-75"></span>
+            <span class="relative inline-flex rounded-full h-3 w-3 bg-green-600"></span>
+          </span>
+        </a>
+    </div>
+    <div class="grid place-items-center relative">
+      <div
+        id="avatar"
+        class="overflow-hidden rounded-[50%] size-64 sm:size-72 md:size-80 bg-blue-300 shadow-xl hover:shadow-2xl"
+      >
+        <img
+          src="/avatar.png"
+          alt="avatar"
+          class="object-cover  mx-auto h-full sombra"
+        />
+      </div>
+      <!-- Social media icons -->
+     {
+      socialLinks.map(social => {
+        const { icon, url, iconClasses, parentClasses } = social;
+        return (
+      <div
+        class={parentClasses}
+      >
+        <a 
+        href={url}
+        target="_blank"
+        >
+        <Icon
+        name={icon}
+        size="25"
+        class={iconClasses}
+        />
+        </a>
+      </div>
+        )
+      })
+     }
+
+    </div>
+  </div>
+
+  <div class="absolute overflow-hidden inset-0 z-0 hidden md:block" id="parallax-container">
+    {
+      iconsFloat.map((icon) => (
+        <div class="icon-wrapper absolute" style={`top: 0; left: 0; ${icon.position.includes('top') ? `top: ${icon.position.match(/top-\[([^%]+)%\]/)[1]}%` : ''};
+        ${icon.position.includes('bottom') ? `top: ${100 - parseInt(icon.position.match(/bottom-\[([^%]+)%\]/)[1])}%` : ''};
+        ${icon.position.includes('left') ? `left: ${icon.position.match(/left-\[([^%]+)%\]/)[1]}%` : ''};
+        ${icon.position.includes('right') ? `left: ${100 - parseInt(icon.position.match(/right-\[([^%]+)%\]/)[1])}%` : ''};`}>
+          <div
+            class="parallax-element"
+            data-depth={icon.depth}
+          >
+            <div class="floating-icon" style={`animation-delay: ${icon.delay}s`}>
+              <Icon name={icon.name} class={icon.opacity} size={icon.size} />
+            </div>
+          </div>
+        </div>
+      ))
+    }
+  </div>
+</section>
+
+<script src="../../helpers/header.ts"></script>
+<style>
+
+  .parallax-element {
+    will-change: transform;
+    transition: transform 0.2s ease-out;
+    position: absolute;
+    transform-origin: center center;
+  }
+  
+  /* Estilos para todas las secciones */
+  section {
+    overflow: hidden;
+  }
+  
+
+  
+
+  
+  .floating-icon {
+    animation: floating 4s ease-in-out infinite;
+    transform-style: preserve-3d;
+  }
+  
+  @keyframes floating {
+    0% { transform: translateY(0px); }
+    50% { transform: translateY(-15px); }
+    100% { transform: translateY(0px); }
+  }
+  
+  .sombra {
+    filter: drop-shadow(0 0 10px rgba(0, 0, 0, 0.8));
+    user-drag: none;
+    -webkit-user-drag: none;
+    user-select: none;
+    -moz-user-select: none;
+  }
+
+  #avatar {
+    transition: transform 0.3s ease-out;
+  }
+  
+
+
+
+  .text-focus-in {
+    -webkit-animation: text-focus-in .7s cubic-bezier(0.550, 0.085, 0.680, 0.530) both;
+    animation: text-focus-in .7s cubic-bezier(0.550, 0.085, 0.680, 0.530) both;
+  }
+
+  @-webkit-keyframes text-focus-in {
+    0% {
+      -webkit-filter: blur(12px);
+      filter: blur(12px);
+      opacity: 0;
+    }
+    100% {
+      -webkit-filter: blur(0px);
+      filter: blur(0px);
+      opacity: 1;
+    }
+  }
+  
+  @keyframes text-focus-in {
+    0% { -webkit-filter: blur(12px); filter: blur(12px); opacity: 0; }
+    100% { -webkit-filter: blur(0px); filter: blur(0px); opacity: 1; }
+  }
+  
+</style>

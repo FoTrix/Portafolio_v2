@@ -1,20 +1,22 @@
 ---
-import Layout from '../layouts/Layout.astro';
-import Header from '../components/Header.astro';
-import Skill from '../components/Skill.astro';
-import Courses from '../components/Courses.astro';
-import About from '../components/About.astro';
-import Contact from '../components/Contact.astro';
+import Layout from "../layouts/Layout.astro";
+import { About, Contact, Courses, Header, Skill } from "../components";
+import { DockComponent } from "@/components/dock/DockComponent";
+import { Meteors } from "@/components/magicui/meteors";
 
 ---
 
 <Layout title="FoTrix - Portaflio">
   <main>
-      <Header />  
-    <Skill/>
-    <Courses/>
-    <About/>
-    <Contact/>
+
+    <DockComponent client:visible />
+    // implement
+    <Meteors number={30} client:visible/>
+    <Header />
+    <Courses />
+    <About />
+    <Contact />
   </main>
 </Layout>
+
 
