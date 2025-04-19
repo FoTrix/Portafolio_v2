@@ -1,7 +1,16 @@
 ---
 // Contacts
+import { Particles } from "@/components/magicui/particles";
 ---
 
-<section id="contact-section" class="min-h-screen grid place-content-center ">
-    <h1 class="text-center text-4xl">Contact</h1>
+<Particles
+  className="absolute inset-0 z-0"
+  quantity={100}
+  ease={80}
+  color="black"
+  refresh
+  client:visible
+/>
+<section id="contact-section" class="min-h-screen grid place-content-center z-10">
+  <h1 class="text-center text-4xl">Contact</h1>
 </section>

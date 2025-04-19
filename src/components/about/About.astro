@@ -1,7 +1,16 @@
 ---
 // about
+import { Particles } from "@/components/magicui/particles";
 ---
 
-<section id="about-section" class="min-h-screen grid place-items-center">
-    <h1 class="text-center text-4xl">About me</h1>
+<Particles
+  className="absolute inset-0 z-0"
+  quantity={100}
+  ease={80}
+  color="black"
+  refresh
+  client:visible
+/>
+<section id="about-section" class="min-h-screen z-10 grid place-items-center">
+  <h1 class="text-center text-4xl">About me</h1>
 </section>

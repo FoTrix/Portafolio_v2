@@ -1,22 +1,16 @@
 ---
 import Layout from "../layouts/Layout.astro";
 import { About, Contact, Courses, Header, Skill } from "../components";
-import { DockComponent } from "@/components/dock/DockComponent";
-import { Meteors } from "@/components/magicui/meteors";
-
+import { SectionPages } from "@/components/dock/SectionPages";
 ---
 
 <Layout title="FoTrix - Portaflio">
   <main>
-
-    <DockComponent client:visible />
+    <SectionPages client:visible />
     <!-- implement -->
-    <Meteors number={30} client:visible/>
     <Header />
     <Courses />
     <About />
     <Contact />
   </main>
 </Layout>
-
-

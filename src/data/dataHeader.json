@@ -113,7 +113,7 @@
       "delay": "3.2"
     }
   ],
-"socialLinks": [
+  "socialLinks": [
     {
       "icon": "ant-design:linkedin-filled",
       "url": "https://www.linkedin.com/in/daniel-uribe-pulgar/",
@@ -127,14 +127,14 @@
       "parentClasses": "absolute rotate-340 top-[75%] left-[2%] bg-white w-fit border border-gray-500 p-1 rounded-lg shadow-md before:content-[''] before:absolute before:left-8 before:top-3 before:border-8 before:border-transparent before:border-l-white"
     },
     {
-      "icon": "logos:stackoverflow-icon", 
+      "icon": "logos:stackoverflow-icon",
       "url": "https://stackoverflow.com/users/29030872/daniel",
       "iconClasses": " rotate-92",
       "parentClasses": "absolute rotate-265 top-[100%] left-[50%] bg-white w-auto border border-gray-500 p-1 rounded-lg shadow-md before:content-[''] before:absolute before:left-8 before:top-3 before:border-8 before:border-transparent before:border-l-white"
     },
     {
       "icon": "logos:whatsapp-icon",
-      "url": "https://wa.link/ziznd6", 
+      "url": "https://wa.link/ziznd6",
       "iconClasses": "rotate-180",
       "parentClasses": "absolute rotate-180 top-[50%] left-[98%] bg-white w-fit border border-gray-500 p-1 rounded-lg shadow-md before:content-[''] before:absolute before:left-8 before:top-3 before:border-8 before:border-transparent before:border-l-white"
     },
