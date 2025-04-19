@@ -18,7 +18,7 @@ export const SectionPages = () => {
         iconMagnification={60}
       >
         <DockIcon magnification={60}>
-          <Grip className=" text-gray-700" />
+          <Grip className=" text-gray-700 dark:text-gray-300" />
         </DockIcon>
 
         {/* House */}
@@ -29,13 +29,13 @@ export const SectionPages = () => {
         </DockIcon>
 
         {/* Separator */}
-        <AlignHorizontalSpaceAround className="text-gray-700" />
+        <AlignHorizontalSpaceAround className="text-gray-700 dark:text-gray-300" />
 
         {/* sections */}
 
         <DockIcon>
           <a href="#courses-section" className="block size-full">
-            <BookMarked className="size-full text-slate-700" />
+            <BookMarked className="size-full text-slate-700 dark:text-slate-300" />
           </a>
         </DockIcon>
 
@@ -52,7 +52,26 @@ export const SectionPages = () => {
         </DockIcon>
 
         <DockIcon>
-          <SunMoon className="size-full" />
+          {/* para cambiar el tema */}
+          <button
+            type="button"
+            aria-label="Cambiar modo oscuro"
+            className="size-full flex items-center justify-center focus:outline-none"
+            onClick={() => {
+              if (typeof window !== 'undefined') {
+                const html = document.documentElement;
+                html.classList.toggle('dark');
+                // Opcional: guardar preferencia en localStorage
+                if (html.classList.contains('dark')) {
+                  localStorage.setItem('theme', 'dark');
+                } else {
+                  localStorage.setItem('theme', 'light');
+                }
+              }
+            }}
+          >
+            <SunMoon className="size-full cursor-pointer" />
+          </button>
         </DockIcon>
       </Dock>
     </div>
