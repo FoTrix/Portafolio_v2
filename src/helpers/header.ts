@@ -1,10 +1,12 @@
+import type { number } from "astro:schema";
+
 document.addEventListener("DOMContentLoaded", () => {
   const header = document.getElementById("header-section");
   const parallaxContainer = document.getElementById("parallax-container");
   const elements = document.querySelectorAll(".parallax-element");
   const poster = document.getElementById("avatar");
 
-  const width = poster?.clientWidth;
+  const width : number  = poster?.clientWidth!;
 
   // Avatar 3D effect on mouse move
   poster?.addEventListener("mousemove", (e) => {

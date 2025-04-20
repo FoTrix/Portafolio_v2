@@ -1,8 +1,8 @@
 ---
 import { Icon } from "astro-icon/components";
-import { iconsFloat, socialLinks } from "../../data/dataHeader.json";
+import { iconsFloat} from "../../data/dataHeader.json";
 import { Meteors } from "../magicui/meteors";
-import { AuroraText } from "@/components/magicui/aurora-text";
+
 import { Particles } from "@/components/magicui/particles";
 import { Title } from "./Title";
 ---
@@ -18,7 +18,7 @@ import { Title } from "./Title";
   id="header-section"
   class="relative h-screen grid place-content-center text-focus-in w-full"
 >
-  <Meteors number={30} client:idle />
+  <Meteors number={30} className="absolute inset-0 z-0" client:idle />
 
   <div
     class="container z-10 inset-shadow-white p-4 rounded-4xl mx-auto px-4 sm:px-6 md:px-10 py-6 sm:py-8 md:py-20 relative grid grid-cols-1 md:grid-cols-2 gap-8 place-items-center"
@@ -59,22 +59,9 @@ import { Title } from "./Title";
         <img
           src="/avatar.png"
           alt="avatar"
-          class="object-cover mx-auto h-full sombra"
+          class="object-cover mx-auto relative -bottom-5 h-full sombra"
         />
       </div>
-      <!-- Social media icons -->
-      {
-        socialLinks.map((social) => {
-          const { icon, url, iconClasses, parentClasses } = social;
-          return (
-            <div class={parentClasses}>
-              <a href={url} target="_blank">
-                <Icon name={icon} size="25" class={iconClasses} />
-              </a>
-            </div>
-          );
-        })
-      }
     </div>
   </div>
 
