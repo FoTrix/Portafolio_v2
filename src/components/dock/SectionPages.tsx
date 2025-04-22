@@ -1,13 +1,6 @@
-import { Dock, DockIcon } from "../magicui/dock";
-import {
-  House,
-  Contact,
-  Headset,
-  BookMarked,
-  AlignHorizontalSpaceAround,
-  Grip,
-  SunMoon,
-} from "lucide-react";
+import { Dock, DockIcon } from "@/components/magicui/dock";
+import { SocialDrawer } from "@/components/dock/SocialDrawer";
+import { BookMarked, Contact, Headset, House, SunMoon } from "lucide-react";
 
 export const SectionPages = () => {
   return (
@@ -17,40 +10,37 @@ export const SectionPages = () => {
         className="fixed bottom-4 right-0 left-0"
         iconMagnification={60}
       >
-        <DockIcon magnification={60}>
-          <Grip className=" text-gray-700 dark:text-gray-300" />
-        </DockIcon>
+        
+        <SocialDrawer />
 
-        {/* House */}
-        <DockIcon magnification={60}>
-          <a href="#header-section" className="block size-full">
+        {/* Separator */}
+        <div className="h-full w-px bg-border dark:bg-neutral-700 mx-2" aria-hidden="true" />
+
+        <DockIcon>
+          <a href="#header-section" className="block size-full" aria-label="Ir a la sección de inicio">
             <House className="size-full text-red-600" />
           </a>
         </DockIcon>
-
-        {/* Separator */}
-        <AlignHorizontalSpaceAround className="text-gray-700 dark:text-gray-300" />
-
         {/* sections */}
 
         <DockIcon>
-          <a href="#courses-section" className="block size-full">
+          <a href="#courses-section" className="block size-full" aria-label="Ir a la sección de cursos">
             <BookMarked className="size-full text-slate-700 dark:text-slate-300" />
           </a>
         </DockIcon>
 
         <DockIcon>
-          <a href="#about-section" className="block size-full">
+          <a href="#about-section" className="block size-full" aria-label="Ir a la sección sobre mí">
             <Contact className="size-full text-amber-700" />
           </a>
         </DockIcon>
 
         <DockIcon>
-          <a href="#contact-section" className="block size-full">
+          <a href="#contact-section" className="block size-full" aria-label="Ir a la sección de contacto">
             <Headset className="size-full text-green-700" />
           </a>
         </DockIcon>
-
+        
         <DockIcon>
           {/* para cambiar el tema */}
           <button
@@ -73,6 +63,7 @@ export const SectionPages = () => {
             <SunMoon className="size-full cursor-pointer" />
           </button>
         </DockIcon>
+        {/* House */}
       </Dock>
     </div>
   );

@@ -1,0 +1,13 @@
+---
+import Layout from "../layouts/Layout.astro"
+import AtroposComponent from "../components/atropos/AtroposComponent"
+import { SectionPages } from "@/components/dock/SectionPages"
+import { Dock, DockIcon } from "@/components/magicui/dock"
+import { Grip } from "lucide-react"
+---
+
+<Layout title="Test">
+    <main class="grid place-content-center h-screen w-full">
+        <SectionPages client:idle />
+    </main>
+</Layout>

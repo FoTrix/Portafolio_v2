@@ -5,6 +5,8 @@ import { Meteors } from "../magicui/meteors";
 
 import { Particles } from "@/components/magicui/particles";
 import { Title } from "./Title";
+import AtroposComponent from "../atropos/AtroposComponent";
+import { SectionPages } from "../dock/SectionPages";
 ---
 
 <Particles
@@ -12,8 +14,10 @@ import { Title } from "./Title";
   quantity={100}
   ease={80}
   refresh
-  client:idle
+  client:visible
 />
+<SectionPages client:visible />
+
 <section
   id="header-section"
   class="relative h-screen grid place-content-center text-focus-in w-full"
@@ -52,18 +56,11 @@ import { Title } from "./Title";
       </a>
     </div>
     <div class="grid place-items-center relative">
-      <div
-        id="avatar"
-        class="overflow-hidden rounded-[50%] size-64 sm:size-72 md:size-80 bg-blue-300 shadow-xl hover:shadow-2xl"
-      >
-        <img
-          src="/avatar.png"
-          alt="avatar"
-          class="object-cover mx-auto relative -bottom-5 h-full sombra"
-        />
-      </div>
+      <AtroposComponent client:load />
     </div>
   </div>
+
+    
 
   <div
     class="absolute overflow-hidden inset-0 z-0 hidden md:block"
@@ -94,6 +91,7 @@ import { Title } from "./Title";
       ))
     }
   </div>
+
 </section>
 
 <script src="../../helpers/header.ts"></script>
@@ -133,17 +131,6 @@ import { Title } from "./Title";
     }
   }
 
-  .sombra {
-    filter: drop-shadow(0 0 10px rgba(0, 0, 0, 0.8));
-    user-drag: none;
-    -webkit-user-drag: none;
-    user-select: none;
-    -moz-user-select: none;
-  }
-
-  #avatar {
-    transition: transform 0.3s ease-out;
-  }
 
   .text-focus-in {
     -webkit-animation: text-focus-in 0.7s cubic-bezier(0.55, 0.085, 0.68, 0.53)
