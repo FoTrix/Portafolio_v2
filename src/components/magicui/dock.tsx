@@ -3,12 +3,12 @@
 import { cva, type VariantProps } from "class-variance-authority";
 import {
   motion,
-   type MotionProps,
-   MotionValue,
+  type MotionProps, // <-- Es buena práctica usar 'type' para importaciones de tipos
+  type MotionValue, // <-- Es buena práctica usar 'type' para importaciones de tipos
   useMotionValue,
   useSpring,
   useTransform,
-} from "motion/react";
+} from "framer-motion";
 import React, { type PropsWithChildren, useRef } from "react";
 
 import { cn } from "@/lib/utils";
@@ -88,7 +88,6 @@ export interface DockIconProps
   mouseX?: MotionValue<number>;
   className?: string;
   children?: React.ReactNode;
-  props?: PropsWithChildren;
 }
 
 const DockIcon = ({
