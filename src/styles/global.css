@@ -17,7 +17,7 @@
   }
 
   * {
-    @apply scroll-smooth;
+    @apply scroll-smooth transition-colors duration-300;
   }
 
   main {
