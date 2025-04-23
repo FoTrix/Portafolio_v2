@@ -6,12 +6,12 @@ import { Meteors } from "../magicui/meteors";
 import { Particles } from "@/components/magicui/particles";
 import { Title } from "./Title";
 import AtroposComponent from "../atropos/AtroposComponent";
-import { SectionPages } from "../dock/SectionPages";
+
 ---
 
 <Particles
   className="absolute inset-0 z-0"
-  quantity={100}
+  quantity={200}
   ease={80}
   refresh
   client:visible
@@ -40,7 +40,7 @@ import { SectionPages } from "../dock/SectionPages";
         class="group inline-flex items-center gap-2 bg-gradient-to-r from-blue-600 to-blue-700 hover:from-blue-700 hover:to-blue-800 text-white font-bold py-3 px-6 rounded-lg transform hover:scale-105 transition-all duration-300 shadow-lg hover:shadow-xl focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-opacity-50 active:scale-95 overflow-hidden relative"
       >
         <Icon
-          name="ant-design:cloud-download-outlined"
+          name="catppuccin:folder-download"
           size="20"
           class="group-hover:rotate-12 transition-transform duration-300"
         />
@@ -66,7 +66,7 @@ import { SectionPages } from "../dock/SectionPages";
     id="parallax-container"
   >
     {
-      iconsFloat.map((icon) => (
+      iconsFloat.map((icon : any) => (
         <div
           class="icon-wrapper absolute"
           style={`top: 0; left: 0; ${icon.position.includes("top") ? `top: ${icon.position.match(/top-\[([^%]+)%\]/)[1]}%` : ""};

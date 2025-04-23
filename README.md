@@ -1,48 +1,101 @@
-# Astro Starter Kit: Basics
+# Portafolio
+_____
 
-```sh
-yarn create astro@latest -- --template basics
+## Tareas:
+
+- [x] Eliminar paquetes de iconify
+- [x] Agregar iconos mas optimizados para skill 
+- [x] Cambiar el efecto del avatar en dispositivos moviles
+- [ ] Agregar estilo al Marquee
+- [ ] Solucionar errores de optimizacion
+- [ ] Cambiar el (titulo full stack)
+- [x] Agregar Proyectos en el drawer
+- [ ] Agregar Cursos hechos
+- [ ] Agregar Contactos
+- [ ] Agregar Verificacion de robot
+
+> #### **Nota:** _tiempo tiempo limite 5 dias_
+
+
+``hola este es un recordatorio``
+
+```tsx
+const hola = () => {
+    return <h1>hola</h1>
+}
 ```
 
-[![Open in StackBlitz](https://developer.stackblitz.com/img/open_in_stackblitz.svg)](https://stackblitz.com/github/withastro/astro/tree/latest/examples/basics)
-[![Open with CodeSandbox](https://assets.codesandbox.io/github/button-edit-lime.svg)](https://codesandbox.io/p/sandbox/github/withastro/astro/tree/latest/examples/basics)
-[![Open in GitHub Codespaces](https://github.com/codespaces/badge.svg)](https://codespaces.new/withastro/astro?devcontainer_path=.devcontainer/basics/devcontainer.json)
+# Markdown Commands Reference
 
-> 🧑‍🚀 **Seasoned astronaut?** Delete this file. Have fun!
+## Text Formatting
+*Italic text* or _italic text_
+**Bold text** or __bold text__
+***Bold and italic*** or ___bold and italic___
+~~Strikethrough text~~
+`Inline code`
 
-![just-the-basics](https://github.com/withastro/astro/assets/2244813/a0a5533c-a856-4198-8470-2d67b1d7c554)
+## Headers
+# H1
+## H2 
+### H3
+#### H4
+##### H5
+###### H6
 
-## 🚀 Project Structure
+## Lists
+1. Ordered list item
+2. Second item
+   - Nested unordered item
+   * Another way
+   + Yet another way
 
-Inside of your Astro project, you'll see the following folders and files:
+## Links and Images
+[Link text](https://example.com)
+![Alt text for image](image.jpg)
 
-```text
-/
-├── public/
-│   └── favicon.svg
-├── src/
-│   ├── layouts/
-│   │   └── Layout.astro
-│   └── pages/
-│       └── index.astro
-└── package.json
-```
+## Blockquotes
+> Single blockquote
+>> Nested blockquote
 
-To learn more about the folder structure of an Astro project, refer to [our guide on project structure](https://docs.astro.build/en/basics/project-structure/).
+## Code Blocks
 
-## 🧞 Commands
+## Tables
+| Header 1 | Header 2 | Header 3 |
+|----------|----------|----------|
+| Cell 1   | Cell 2   | Cell 3   |
+| Row 2    | Data     | More     |
 
-All commands are run from the root of the project, from a terminal:
+## Task Lists
+- [x] Completed task
+- [ ] Incomplete task
+- [ ] Another todo item
 
-| Command                | Action                                           |
-| :--------------------- | :----------------------------------------------- |
-| `yarn install`         | Installs dependencies                            |
-| `yarn dev`             | Starts local dev server at `localhost:4321`      |
-| `yarn build`           | Build your production site to `./dist/`          |
-| `yarn preview`         | Preview your build locally, before deploying     |
-| `yarn astro ...`       | Run CLI commands like `astro add`, `astro check` |
-| `yarn astro -- --help` | Get help using the Astro CLI                     |
+## Horizontal Rules
+___
+---
+***
 
-## 👀 Want to learn more?
+## Footnotes
+Here's a sentence with a footnote[^1].
+[^1]: This is the footnote.
 
-Feel free to check [our documentation](https://docs.astro.build) or jump into our [Discord server](https://astro.build/chat).
+## Definition Lists
+Term
+: Definition
+: Another definition
+
+## Subscript and Superscript
+H~2~O
+X^2^
+
+## Emoji
+:smile: :heart: :thumbsup:
+
+## Highlighting
+==highlighted text==
+
+## Comments
+[//]: # (This is a comment)
+[comment]: # (Another comment style)
+
+## Diagrams (Mermaid)

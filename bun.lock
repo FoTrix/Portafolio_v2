@@ -30,11 +30,7 @@
         "tw-animate-css": "1.2.5",
       },
       "devDependencies": {
-        "@iconify-json/ant-design": "^1.2.5",
         "@iconify-json/catppuccin": "^1.2.10",
-        "@iconify-json/fa6-brands": "^1.2.5",
-        "@iconify-json/logos": "^1.2.4",
-        "@iconify-json/simple-icons": "^1.2.33",
         "@iconify-json/skill-icons": "^1.2.0",
         "@iconify-json/vscode-icons": "^1.2.19",
         "autoprefixer": "^10.4.21",
@@ -179,15 +175,7 @@
 
     "@fortawesome/react-fontawesome": ["@fortawesome/react-fontawesome@0.2.2", "", { "dependencies": { "prop-types": "^15.8.1" }, "peerDependencies": { "@fortawesome/fontawesome-svg-core": "~1 || ~6", "react": ">=16.3" } }, "sha512-EnkrprPNqI6SXJl//m29hpaNzOp1bruISWaOiRtkMi/xSvHJlzc2j2JAYS7egxt/EbjSNV/k6Xy0AQI6vB2+1g=="],
 
-    "@iconify-json/ant-design": ["@iconify-json/ant-design@1.2.5", "", { "dependencies": { "@iconify/types": "*" } }, "sha512-SYxhrx1AFq2MBcXk77AERYz2mPhLQes1F0vtvG64+dJZWyge9studXo7MiR8PPeLjRjZdWRrReRbxiwdRMf70Q=="],
-
     "@iconify-json/catppuccin": ["@iconify-json/catppuccin@1.2.10", "", { "dependencies": { "@iconify/types": "*" } }, "sha512-Scwa5VKd29ZV0T5oTK26FSqVbABgdAE1Bo4Ybc6Qy4J1A3gO4i18cM+kljDKKUHXrOnVx+cXTtZ6xDKHvRLqGg=="],
-
-    "@iconify-json/fa6-brands": ["@iconify-json/fa6-brands@1.2.5", "", { "dependencies": { "@iconify/types": "*" } }, "sha512-U/iFfziz6jSN9zArOJZYTtoj2tQyh6MxPdI8M84DQ2kEulPaj8j+h9bqvjmzszNHmD7v+kmmKd/MLkMKk+3Zuw=="],
-
-    "@iconify-json/logos": ["@iconify-json/logos@1.2.4", "", { "dependencies": { "@iconify/types": "*" } }, "sha512-XC4If5D/hbaZvUkTV8iaZuGlQCyG6CNOlaAaJaGa13V5QMYwYjgtKk3vPP8wz3wtTVNVEVk3LRx1fOJz+YnSMw=="],
-
-    "@iconify-json/simple-icons": ["@iconify-json/simple-icons@1.2.33", "", { "dependencies": { "@iconify/types": "*" } }, "sha512-nL5/UmI9x5PQ/AHv6bOaL2pH6twEdEz4pI89efB/K7HFn5etQnxMtGx9DFlOg/sRA2/yFpX8KXvc95CSDv5bJA=="],
 
     "@iconify-json/skill-icons": ["@iconify-json/skill-icons@1.2.0", "", { "dependencies": { "@iconify/types": "*" } }, "sha512-5zlPrzF5pelV1wut7C88zmAiYONvGxvFw11dXW1Pr1oIhUOtYhC7x3zkErSTFkyZ3m5fEgcEUrcO1W3UhNJVpw=="],
 

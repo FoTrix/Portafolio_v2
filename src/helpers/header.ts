@@ -1,4 +1,4 @@
-import type { number } from "astro:schema";
+
 
 document.addEventListener("DOMContentLoaded", () => {
   const header = document.getElementById("header-section");

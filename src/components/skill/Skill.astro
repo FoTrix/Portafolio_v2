@@ -1,119 +1,142 @@
 ---
+import { Marquee } from "@/components/magicui/marquee"
 import { Icon } from "astro-icon/components";
-import { skills } from "../../data/dataSkill.json";
+
+
+const skills = {
+  "skillImportant": [
+    {
+      "icon": "skill-icons:react-dark",
+      "name": "React"
+    },
+    {
+      "icon": "skill-icons:git",
+      "name": "Git"
+    },
+    {
+      "icon": "skill-icons:javascript",
+      "name": "JavaScript"
+    },
+    {
+      "icon": "skill-icons:java-dark",
+      "name": "Java"
+    },
+    {
+      "icon": "skill-icons:spring-dark",
+      "name": "Spring Boot"
+    },
+    { 
+      "icon": "skill-icons:mysql-dark", 
+      "name": "MySQL"
+    },
+    {
+      "icon": "skill-icons:html",
+      "name": "HTML"
+    },
+    {
+      "icon": "vscode-icons:file-type-css",
+      "name": "CSS"
+    },
+    {
+      "icon": "vscode-icons:file-type-astro",
+      "name": "Astro"
+    },
+    {
+      "icon": "skill-icons:tailwindcss-dark",
+      "name": "TailwindCSS"
+    },
+    {
+      "icon": "skill-icons:typescript",
+      "name": "TypeScript"
+    },
+    {
+      "icon": "skill-icons:materialui-dark",
+      "name": "Material UI",
+    },
+    {
+      "icon": "skill-icons:bootstrap",
+      "name": "Bootstrap"
+    },
+    {
+      "icon": "skill-icons:nodejs-dark",
+      "name": "NodeJS",
+    }
+  ],
+  "tools": [
+    {
+      "icon": "skill-icons:vscode-dark",
+      "name": "VS Code",      
+    },
+    {
+      "icon": "skill-icons:postman",
+      "name": "Postman",
+    },
+    {
+      "icon": "skill-icons:apple-dark",
+      "name": "MacOS",
+    },
+    {
+      "icon": "skill-icons:bun-dark",
+      "name": "Bun",
+    },
+    {
+      "icon": "skill-icons:notion-dark",
+      "name": "Notion",
+    },
+    {
+      "icon": "skill-icons:github-dark", 
+      "name": "GitHub"
+    },
+    {
+      "icon": "skill-icons:aws-dark",
+      "name": "AWS",
+    },
+  ]
+} 
 ---
 
-<div class="shadow-scroll w-full h-40">
-  <article class="wrapper">
-    {
-      skills.map((skill) => {
-        const { iconName, className } = skill;
-        return (
-          <div class={className}>
-            <Icon size="50" name={iconName} />
-          </div>
-        );
-      })
-    }
-  </article>
+<div class="relative flex w-full flex-col items-center justify-center space-y-15 overflow-x-hidden">
 
-  <style>
-    .item {
-      width: 200px;
-      height: 100px;
-      background: rgb(17, 16, 16);
-      border-radius: 6px;
-      position: absolute;
-      overflow-y: visible;
-      left: max(calc(200px * 16), 100%);
-      animation-name: scrollLeft;
-      animation-duration: 30s;
-      animation-timing-function: linear;
-      animation-iteration-count: infinite;
-    }
-
-    .shadow-scroll {
-      filter: drop-shadow(0 10px 30px rgba(13, 7, 64, 0.8));
-    }
-
-    /* 
-      This animation creates an infinite scroll effect with 8 items.
-      Each item has a calculated delay based on its position:
-      - Total animation duration is 30s
-      - Items are evenly spaced using (30s / 8) as the base delay
-      - (8 - n) determines each item's position in the sequence
-      - The -1 multiplier makes items move from right to left
-    */
-    .item1 {
-      animation-delay: calc(30s / 16 * (16 - 1) * -1);
-    }
-    .item2 {
-      animation-delay: calc(30s / 16 * (16 - 2) * -1);
-    }
-    .item3 {
-      animation-delay: calc(30s / 16 * (16 - 3) * -1);
-    }
-    .item4 {
-      animation-delay: calc(30s / 16 * (16 - 4) * -1);
-    }
-    .item5 {
-      animation-delay: calc(30s / 16 * (16 - 5) * -1);
-    }
-    .item6 {
-      animation-delay: calc(30s / 16 * (16 - 6) * -1);
-    }
-    .item7 {
-      animation-delay: calc(30s / 16 * (16 - 7) * -1);
-    }
-    .item8 {
-      animation-delay: calc(30s / 16 * (16 - 8) * -1);
-    }
-    .item9 {
-      animation-delay: calc(30s / 16 * (16 - 9) * -1);
-    }
-    .item10 {
-      animation-delay: calc(30s / 16 * (16 - 10) * -1);
-    }
-    .item11 {
-      animation-delay: calc(30s / 16 * (16 - 11) * -1);
-    }
-    .item12 {
-      animation-delay: calc(30s / 16 * (16 - 12) * -1);
-    }
-    .item13 {
-      animation-delay: calc(30s / 16 * (16 - 13) * -1);
-    }
-    .item14 {
-      animation-delay: calc(30s / 16 * (16 - 14) * -1);
-    }
-    .item15 {
-      animation-delay: calc(30s / 16 * (16 - 15) * -1);
-    }
-    .item16 {
-      animation-delay: calc(30s / 16 * (16 - 16) * -1);
-    }
-
-    @keyframes scrollLeft {
-      to {
-        left: -200px;
+  <!-- programation lenguage, framework and library -->
+  <Marquee className="text-white [--duration:40s] [--gap:2rem] shadow-2xl/30 shadow-blue-500/50" pauseOnHover aria-label="Scroll horizontal infinito">
+    <div class="flex items-center gap-8 drop-shadow-2xl drop-shadow-blue-800">
+      {
+        skills.skillImportant.map((skill) => {
+          const {name, icon} = skill;
+          return (
+            <article class="grid h-3/4 z-10 place-items-center py-5 rounded-md relative">
+              <div class="absolute -z-10 size-full rounded-md bg-neutral-800/60"></div>
+              <Icon name={icon} size={"full"} />
+              <h2 class="text-xl">
+              {name}
+              </h2>
+            </article>
+          )
+        })
       }
-    }
+    </div>
+  </Marquee>
+  
 
-    .wrapper {
-      width: 90%;
-      box-shadow: 0 100px 50px rgba(0, 0, 0, 0.8);
-      margin-inline: auto;
-      max-width: 1536px;
-      position: relative;
-      height: 100px;
-      overflow: hidden;
-      mask-image: linear-gradient(
-        to right,
-        rgba(0, 0, 0, 0),
-        rgba(0, 0, 0, 1) 20%,
-        rgba(0, 0, 0, 1) 80%,
-        rgba(0, 0, 0, 0)
-      );
-    }
-  </style>
+  <!-- Tools -->
+  <Marquee className="text-white [--duration:40s] [--gap:2rem] shadow-2xl/30 shadow-blue-500/50" reverse pauseOnHover aria-label="Scroll horizontal infinito">
+    <div class="flex items-center overflow-visible gap-8 drop-shadow-2xl drop-shadow-blue-800 ">
+{
+        skills.tools.map((skill) => {
+          const {name, icon} = skill;
+          return (
+          <article class="grid h-3/4 z-10 place-items-center py-5 rounded-md relative">
+              <div class="absolute -z-10 size-full rounded-md bg-neutral-800/60"></div>
+              <Icon name={icon} size={"full"} />
+              <h2 class="text-xl">
+              {name}
+              </h2>
+          </article>
+          )
+        })
+}
+    </div>
+  </Marquee>
+  <div class="pointer-events-none absolute inset-y-0 left-0 w-1/4 bg-gradient-to-r from-accent"></div>
+  <div class="pointer-events-none absolute inset-y-0 right-0 w-1/4 bg-gradient-to-l from-accent"></div>
 </div>

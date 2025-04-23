@@ -8,14 +8,15 @@ import { SectionPages } from "@/components/dock/SectionPages";
 
 <Layout title="FoTrix - Portafolio">
   <main>
-  <SectionPages client:visible />
-
-    <Header />
-    <!-- implement -->
-    <Courses />
-    <About />
-    <Contact />
-    <!-- implement -->
+  <SectionPages client:idle />
+<div class="space-y-10">
+  <Header />
+  <!-- implement -->
+  <Courses />
+  <About />
+  <Contact />
+  <!-- implement -->
+</div>
   
   </main>
 </Layout>

@@ -7,7 +7,7 @@ export default {
   ],
   theme: {
     extend: {
-      // colores
+      
     },
   },
   plugins: [],

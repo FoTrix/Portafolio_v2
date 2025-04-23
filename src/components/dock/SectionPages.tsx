@@ -2,31 +2,32 @@ import { Dock, DockIcon } from "@/components/magicui/dock";
 import { AnimatePresence, motion } from "framer-motion";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faDiscord, faWhatsapp, faStackOverflow, faLinkedin, faGithub } from "@fortawesome/free-brands-svg-icons";
+import { faLightbulb } from "@fortawesome/free-solid-svg-icons";
 import { BookMarked, Contact, Grip, Headset, House, SunMoon, X } from "lucide-react";
 import { useState } from "react";
 
 
 const socialLinks = [
   {
-    href: 'https://wa.me/YOUR_WHATSAPP_NUMBER',
+    href: 'https://wa.link/ziznd6',
     icon: faWhatsapp,
     label: 'WhatsApp',
     color: 'text-green-500',
   },
   {
-    href: 'https://github.com/YOUR_GITHUB_USERNAME',
+    href: 'https://github.com/fotrix',
     icon: faGithub,
     label: 'GitHub',
     color: 'text-gray-700 dark:text-gray-300',
   },
   {
-    href: 'https://linkedin.com/in/YOUR_LINKEDIN_PROFILE',
+    href: 'https://www.linkedin.com/in/daniel-uribe-pulgar/',
     icon: faLinkedin,
     label: 'LinkedIn',
     color: 'text-blue-600',
   },
   {
-    href: 'https://stackoverflow.com/users/YOUR_STACKOVERFLOW_ID',
+    href: 'https://stackoverflow.com/users/29030872/daniel',
     icon: faStackOverflow,
     label: 'Stack Overflow',
     color: 'text-orange-500 hover:text-orange-600',
@@ -70,7 +71,15 @@ const SocialDrawer: React.FC<SocialDrawerProps> = ({ isOpen, onClose }) => {
               </a>
             );
           })}
-          {/* Separator */}
+          <a
+           href="/project"
+           rel="noopener noreferrer"
+           aria-label="Ir a la sección de proyectos"
+           className="block p-1.5 rounded-full hover:bg-muted/50 dark:hover:bg-neutral-700/50 transition-colors text-yellow-500"
+           >
+          <FontAwesomeIcon icon={faLightbulb} size="xl" />
+          </a>
+            {/* Separator */}
           <div className="w-full h-px bg-border dark:bg-neutral-700 my-1"></div>
           <button
             onClick={onClose}

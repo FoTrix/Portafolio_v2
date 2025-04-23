@@ -65,7 +65,7 @@
       "delay": "0.7"
     },
     {
-      "name": "logos:github-icon",
+      "name": "catppuccin:database",
       "size": "60",
       "position": "bottom-[15%] left-[40%]",
       "depth": "0.9",
@@ -81,7 +81,7 @@
       "delay": "2.7"
     },
     {
-      "name": "logos:nodejs-icon",
+      "name": "catppuccin:apple",
       "size": "40",
       "position": "top-[20%] right-[5%]",
       "depth": "0.6",
@@ -111,38 +111,6 @@
       "depth": "0.9",
       "opacity": "text-white/20",
       "delay": "3.2"
-    }
-  ],
-  "socialLinks": [
-    {
-      "icon": "ant-design:linkedin-filled",
-      "url": "https://www.linkedin.com/in/daniel-uribe-pulgar/",
-      "iconClasses": "text-blue-700",
-      "parentClasses": "absolute rotate-22 top-[10%] left-[6%] bg-white w-fit border border-gray-500 p-1 rounded-lg shadow-md before:content-[''] before:absolute before:left-8 before:top-3 before:border-8 before:border-transparent before:border-l-white"
-    },
-    {
-      "icon": "ant-design:github-filled",
-      "url": "https://github.com/fotrix",
-      "iconClasses": "text-gray-700",
-      "parentClasses": "absolute rotate-340 top-[75%] left-[2%] bg-white w-fit border border-gray-500 p-1 rounded-lg shadow-md before:content-[''] before:absolute before:left-8 before:top-3 before:border-8 before:border-transparent before:border-l-white"
-    },
-    {
-      "icon": "logos:stackoverflow-icon",
-      "url": "https://stackoverflow.com/users/29030872/daniel",
-      "iconClasses": " rotate-92",
-      "parentClasses": "absolute rotate-265 top-[100%] left-[50%] bg-white w-auto border border-gray-500 p-1 rounded-lg shadow-md before:content-[''] before:absolute before:left-8 before:top-3 before:border-8 before:border-transparent before:border-l-white"
-    },
-    {
-      "icon": "logos:whatsapp-icon",
-      "url": "https://wa.link/ziznd6",
-      "iconClasses": "rotate-180",
-      "parentClasses": "absolute rotate-180 top-[50%] left-[98%] bg-white w-fit border border-gray-500 p-1 rounded-lg shadow-md before:content-[''] before:absolute before:left-8 before:top-3 before:border-8 before:border-transparent before:border-l-white"
-    },
-    {
-      "icon": "simple-icons:instagram",
-      "url": "https://www.instagram.com/dufotrix/",
-      "iconClasses": "rotate-90 text-orange-500",
-      "parentClasses": "absolute rotate-146 top-[10%] left-[85%] bg-white w-fit border border-gray-500 p-1 rounded-lg shadow-md before:content-[''] before:absolute before:left-8 before:top-3 before:border-8 before:border-transparent before:border-l-white"
     }
   ]
 }
