@@ -1,18 +1,110 @@
 import { Dock, DockIcon } from "@/components/magicui/dock";
-import { SocialDrawer } from "@/components/dock/SocialDrawer";
-import { BookMarked, Contact, Headset, House, SunMoon } from "lucide-react";
+import { AnimatePresence, motion } from "framer-motion";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faDiscord, faWhatsapp, faStackOverflow, faLinkedin, faGithub } from "@fortawesome/free-brands-svg-icons";
+import { BookMarked, Contact, Grip, Headset, House, SunMoon, X } from "lucide-react";
+import { useState } from "react";
+
+
+const socialLinks = [
+  {
+    href: 'https://wa.me/YOUR_WHATSAPP_NUMBER',
+    icon: faWhatsapp,
+    label: 'WhatsApp',
+    color: 'text-green-500',
+  },
+  {
+    href: 'https://github.com/YOUR_GITHUB_USERNAME',
+    icon: faGithub,
+    label: 'GitHub',
+    color: 'text-gray-700 dark:text-gray-300',
+  },
+  {
+    href: 'https://linkedin.com/in/YOUR_LINKEDIN_PROFILE',
+    icon: faLinkedin,
+    label: 'LinkedIn',
+    color: 'text-blue-600',
+  },
+  {
+    href: 'https://stackoverflow.com/users/YOUR_STACKOVERFLOW_ID',
+    icon: faStackOverflow,
+    label: 'Stack Overflow',
+    color: 'text-orange-500 hover:text-orange-600',
+  },
+  {
+    href: 'https://discord.com/users/YOUR_DISCORD_ID',
+    icon: faDiscord,
+    label: 'Discord',
+    color: 'text-indigo-500 hover:text-indigo-600',
+  },
+];
+
+interface SocialDrawerProps {
+  isOpen: boolean;
+  onClose: () => void;
+}
+const SocialDrawer: React.FC<SocialDrawerProps> = ({ isOpen, onClose }) => {
+  return (
+    <AnimatePresence>
+      {isOpen && (
+        <motion.div
+          initial={{ opacity: 0, y: 10, scale: 0.95 }}
+          animate={{ opacity: 1, y: 0, scale: 1 }}
+          exit={{ opacity: 0, y: 10, scale: 0.95 }}
+          transition={{ duration: 0.15, ease: 'easeOut' }}
+          className="fixed bottom-20 left-[calc(50%-130px)] -translate-x-1/2 p-2 bg-background/80 dark:bg-neutral-900/80 backdrop-blur-md border border-border dark:border-neutral-700 rounded-lg shadow-lg flex flex-col space-y-1.5 items-center z-20"
+          style={{ minWidth: '55px' }}
+        >
+          {socialLinks.map((link) => {
+            const { icon, href, label, color } = link;
+            return (
+              <a
+                key={label}
+                href={href}
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label={label}
+                className={`block p-1.5 rounded-full hover:bg-muted/50 dark:hover:bg-neutral-700/50 transition-colors ${color}`}
+              >
+                <FontAwesomeIcon icon={icon} size="xl" />
+              </a>
+            );
+          })}
+          {/* Separator */}
+          <div className="w-full h-px bg-border dark:bg-neutral-700 my-1"></div>
+          <button
+            onClick={onClose}
+            aria-label="Cerrar drawer social"
+            className="p-1.5 rounded-full text-muted-foreground dark:text-neutral-400 hover:bg-muted/50 dark:hover:bg-neutral-700/50 hover:text-foreground dark:hover:text-neutral-300 transition-colors"
+          >
+            <X className="size-5" />
+          </button>
+        </motion.div>
+      )}
+    </AnimatePresence>
+  );
+};
 
 export const SectionPages = () => {
+  
+  const [isOpen, seTisOpen] = useState(false);
+
+  const toggleDrawer = () => {
+    seTisOpen(!isOpen);
+  };
+
   return (
     <div className="relative z-20">
+      <SocialDrawer isOpen={isOpen} onClose={toggleDrawer} />
+      
       <Dock
         iconDistance={80}
         className="fixed bottom-4 right-0 left-0"
         iconMagnification={60}
       >
-        
-        <SocialDrawer />
-
+        <DockIcon magnification={0} distance={0} onClick={toggleDrawer} className="cursor-pointer">
+        <Grip className="text-gray-700 dark:text-gray-300" />
+      </DockIcon>
         {/* Separator */}
         <div className="h-full w-px bg-border dark:bg-neutral-700 mx-2" aria-hidden="true" />
 
@@ -65,6 +157,11 @@ export const SectionPages = () => {
         </DockIcon>
         {/* House */}
       </Dock>
+
+
+
+   
     </div>
   );
 };
+
