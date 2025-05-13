@@ -1,0 +1,20 @@
+---
+import { Icon } from "astro-icon/components";
+
+
+interface SkillProps {
+    name: string;
+    icon: string;
+}
+
+const {name, icon} = Astro.props;
+---
+
+
+    <article class="grid h-2/4 z-10 place-items-center py-5 rounded-md relative shadow-2xl">
+        <div class="absolute -z-10 size-full rounded-md dark:bg-neutral-900"></div>
+        <Icon name={icon} size={"full"} />
+        <h2 class="text-xl">
+        {name}
+        </h2>
+    </article>

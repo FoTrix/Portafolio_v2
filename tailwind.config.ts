@@ -6,9 +6,13 @@ export default {
     "./node_modules/magic-ui/dist/**/*.{js,ts,jsx,tsx}",
   ],
   theme: {
+
     extend: {
-      
+      height: {
+        'responsive': '100dvh',
+      }
     },
+    
   },
   plugins: [],
   darkMode: "class",

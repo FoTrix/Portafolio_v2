@@ -125,6 +125,12 @@ export const SectionPages = () => {
         {/* sections */}
 
         <DockIcon>
+          <a href="#skill-section" className="block size-full" aria-label="Ir a la sección de cursos">
+            <BookMarked className="size-full text-slate-700 dark:text-slate-300" />
+          </a>
+        </DockIcon>
+
+        <DockIcon>
           <a href="#courses-section" className="block size-full" aria-label="Ir a la sección de cursos">
             <BookMarked className="size-full text-slate-700 dark:text-slate-300" />
           </a>

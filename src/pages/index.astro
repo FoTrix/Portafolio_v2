@@ -1,6 +1,6 @@
 ---
 import Layout from "../layouts/Layout.astro";
-import { About, Contact, Courses, Header } from "../components";
+import { About, Contact, Skill, Header, Courses } from "../components";
 import { SectionPages } from "@/components/dock/SectionPages";
 
 
@@ -9,14 +9,12 @@ import { SectionPages } from "@/components/dock/SectionPages";
 <Layout title="FoTrix - Portafolio">
   <main>
   <SectionPages client:idle />
-<div class="space-y-10">
   <Header />
   <!-- implement -->
-  <Courses />
   <About />
+  <Skill />
+  <Courses />
   <Contact />
   <!-- implement -->
-</div>
-  
   </main>
 </Layout>

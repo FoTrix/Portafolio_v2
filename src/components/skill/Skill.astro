@@ -1,142 +1,51 @@
 ---
 import { Marquee } from "@/components/magicui/marquee"
-import { Icon } from "astro-icon/components";
-
-
-const skills = {
-  "skillImportant": [
-    {
-      "icon": "skill-icons:react-dark",
-      "name": "React"
-    },
-    {
-      "icon": "skill-icons:git",
-      "name": "Git"
-    },
-    {
-      "icon": "skill-icons:javascript",
-      "name": "JavaScript"
-    },
-    {
-      "icon": "skill-icons:java-dark",
-      "name": "Java"
-    },
-    {
-      "icon": "skill-icons:spring-dark",
-      "name": "Spring Boot"
-    },
-    { 
-      "icon": "skill-icons:mysql-dark", 
-      "name": "MySQL"
-    },
-    {
-      "icon": "skill-icons:html",
-      "name": "HTML"
-    },
-    {
-      "icon": "vscode-icons:file-type-css",
-      "name": "CSS"
-    },
-    {
-      "icon": "vscode-icons:file-type-astro",
-      "name": "Astro"
-    },
-    {
-      "icon": "skill-icons:tailwindcss-dark",
-      "name": "TailwindCSS"
-    },
-    {
-      "icon": "skill-icons:typescript",
-      "name": "TypeScript"
-    },
-    {
-      "icon": "skill-icons:materialui-dark",
-      "name": "Material UI",
-    },
-    {
-      "icon": "skill-icons:bootstrap",
-      "name": "Bootstrap"
-    },
-    {
-      "icon": "skill-icons:nodejs-dark",
-      "name": "NodeJS",
-    }
-  ],
-  "tools": [
-    {
-      "icon": "skill-icons:vscode-dark",
-      "name": "VS Code",      
-    },
-    {
-      "icon": "skill-icons:postman",
-      "name": "Postman",
-    },
-    {
-      "icon": "skill-icons:apple-dark",
-      "name": "MacOS",
-    },
-    {
-      "icon": "skill-icons:bun-dark",
-      "name": "Bun",
-    },
-    {
-      "icon": "skill-icons:notion-dark",
-      "name": "Notion",
-    },
-    {
-      "icon": "skill-icons:github-dark", 
-      "name": "GitHub"
-    },
-    {
-      "icon": "skill-icons:aws-dark",
-      "name": "AWS",
-    },
-  ]
-} 
+import { skillImportant, tools } from "@/data/dataSkill.json";
+import SkillComponent from "./SkillComponent.astro";
+import { Particles } from "@/components/magicui/particles";
 ---
 
-<div class="relative flex w-full flex-col items-center justify-center space-y-15 overflow-x-hidden">
+<Particles
+  className="absolute inset-0 z-0"
+  quantity={100}
+  ease={80}
+  color="black"
+  refresh
+  client:visible
+/>
 
-  <!-- programation lenguage, framework and library -->
-  <Marquee className="text-white [--duration:40s] [--gap:2rem] shadow-2xl/30 shadow-blue-500/50" pauseOnHover aria-label="Scroll horizontal infinito">
-    <div class="flex items-center gap-8 drop-shadow-2xl drop-shadow-blue-800">
-      {
-        skills.skillImportant.map((skill) => {
-          const {name, icon} = skill;
-          return (
-            <article class="grid h-3/4 z-10 place-items-center py-5 rounded-md relative">
-              <div class="absolute -z-10 size-full rounded-md bg-neutral-800/60"></div>
-              <Icon name={icon} size={"full"} />
-              <h2 class="text-xl">
-              {name}
-              </h2>
-            </article>
-          )
-        })
-      }
-    </div>
-  </Marquee>
+<section
+  id="skill-section"
+  class="min-h-responsive z-10 relative overflow-hidden w-full grid place-items-center"
+>
+
+  <div class="relative flex w-full flex-col items-center justify-center overflow-x-hidden">
   
-
-  <!-- Tools -->
-  <Marquee className="text-white [--duration:40s] [--gap:2rem] shadow-2xl/30 shadow-blue-500/50" reverse pauseOnHover aria-label="Scroll horizontal infinito">
-    <div class="flex items-center overflow-visible gap-8 drop-shadow-2xl drop-shadow-blue-800 ">
-{
-        skills.tools.map((skill) => {
-          const {name, icon} = skill;
-          return (
-          <article class="grid h-3/4 z-10 place-items-center py-5 rounded-md relative">
-              <div class="absolute -z-10 size-full rounded-md bg-neutral-800/60"></div>
-              <Icon name={icon} size={"full"} />
-              <h2 class="text-xl">
-              {name}
-              </h2>
-          </article>
+    <!-- programation lenguage, framework and library -->
+    <Marquee className="text-white [--duration:40s] [--gap:2rem]" pauseOnHover aria-label="Scroll horizontal infinito">
+        <div class="flex items-center gap-8 drop-shadow-2xl">
+          {
+            skillImportant.map((skill) => (
+              <SkillComponent {...skill}/>
+              )
+            )
+          }
+        </div>
+    </Marquee>
+    
+  
+    <!-- Tools -->
+    <Marquee className="text-white [--duration:40s] [--gap:2rem]" reverse pauseOnHover aria-label="Scroll horizontal infinito">
+      <div class="flex items-center overflow-visible gap-8 drop-shadow-2xl  ">
+  {
+          tools.map((skill) => (
+            <SkillComponent {...skill}/>
+            )
           )
-        })
-}
-    </div>
-  </Marquee>
-  <div class="pointer-events-none absolute inset-y-0 left-0 w-1/4 bg-gradient-to-r from-accent"></div>
-  <div class="pointer-events-none absolute inset-y-0 right-0 w-1/4 bg-gradient-to-l from-accent"></div>
-</div>
+  }
+      </div>
+    </Marquee>
+    <div class="pointer-events-none absolute inset-y-0 left-0 w-1/4 bg-gradient-to-r from-accent"></div>
+    <div class="pointer-events-none absolute inset-y-0 right-0 w-1/4 bg-gradient-to-l from-accent"></div>
+  </div>
+</section>

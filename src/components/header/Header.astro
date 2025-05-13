@@ -14,12 +14,12 @@ import AtroposComponent from "../atropos/AtroposComponent";
   quantity={200}
   ease={80}
   refresh
-  client:visible
+  client:idle
 />
 
 <section
   id="header-section"
-  class="relative h-screen grid place-content-center text-focus-in w-full"
+  class="relative min-h-responsive grid place-content-center text-focus-in w-full"
 >
   <Meteors number={30} className="absolute inset-0 z-0" client:idle />
 

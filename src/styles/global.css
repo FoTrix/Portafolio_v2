@@ -3,7 +3,7 @@
 
 @custom-variant dark (&:is(.dark *));
 
-@config "../../tailwind.config.mjs";
+@config "../../tailwind.config.ts";
 
 @layer base {
   html,
@@ -157,7 +157,8 @@
   to {
     transform: translateY(calc(-100% - var(--gap)));
     }
-  }}
+  }
+}
 
 :root {
 
@@ -307,5 +308,7 @@
     @apply bg-background text-foreground;
   }
 }
+
+
 
 
