@@ -29,7 +29,7 @@ const AtroposComponent = () => {
       {isMobile ? (
         // Render simple image on mobile
         <div className="size-full z-20 rounded-full">
-          <img src="/avatar.png" alt="avatar" className="backdrop-blur-md size-full relative -bottom-6 z-30 object-contain sombra" />
+          <img src="/images/header/avatar.webp" alt="avatar" className="backdrop-blur-md size-full relative -bottom-6 z-30 object-contain sombra" />
         </div>
       ) : (
         // Render Atropos component on larger screens
@@ -42,7 +42,7 @@ const AtroposComponent = () => {
           activeOffset={30}
         >
             <div data-atropos-offset="15" className="size-full z-20 rounded-full">
-                <img src="/avatar.png" alt="avatar"  className=" backdrop-blur-md size-full relative -bottom-6 z-30 object-contain sombra" />
+                <img src="/images/header/avatar.webp" alt="avatar"  className="backdrop-blur-md size-full relative -bottom-6 z-30 object-contain sombra" />
             </div>
         </Atropos>
       )}

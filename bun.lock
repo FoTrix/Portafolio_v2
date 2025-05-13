@@ -4,7 +4,7 @@
     "": {
       "name": "project-v1",
       "dependencies": {
-        "@astrojs/netlify": "6.3.2",
+        "@astrojs/netlify": "^6.3.2",
         "@astrojs/react": "4.2.7",
         "@fortawesome/fontawesome-svg-core": "^6.7.2",
         "@fortawesome/free-brands-svg-icons": "^6.7.2",

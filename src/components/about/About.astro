@@ -2,6 +2,7 @@
 // about
 import { Particles } from "@/components/magicui/particles";
 import { BorderBeam } from "../magicui/border-beam";
+import ImgAbout from "./ImgAbout"
 ---
 
 <Particles
@@ -15,8 +16,8 @@ import { BorderBeam } from "../magicui/border-beam";
 <section id="about-section" class="min-h-responsive z-10 grid place-items-center p-4 md:p-8">
   <div class="container mx-auto grid md:grid-cols-2 gap-8 items-center bg-white/80 dark:bg-black/80 p-6 md:p-10 rounded-xl shadow-xl backdrop-blur-md">
     <div class="flex justify-center">
-      <img src="/About.svg" alt="Acerca de mí" class="w-full max-w-md h-auto rounded-lg shadow-lg" />
-    </div>
+      <ImgAbout client:load/>
+  </div>
     <div class="text-gray-700 dark:text-gray-300">
       <h2 class="text-3xl md:text-4xl font-bold mb-4 text-center md:text-left text-amber-600 dark:text-amber-500">Sobre Mí</h2>
       <div class="prose prose-lg dark:prose-invert prose-p:text-gray-700 dark:prose-p:text-gray-300 max-w-none">

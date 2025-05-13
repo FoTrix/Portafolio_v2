@@ -16,13 +16,13 @@ import { Particles } from "@/components/magicui/particles";
 
 <section
   id="skill-section"
-  class="h-min z-10 relative overflow-hidden w-full grid place-items-center"
+  class="z-10 relative overflow-hidden w-full grid place-items-center"
 >
 
   <div class="relative flex w-full flex-col items-center justify-center overflow-x-hidden">
   
     <!-- programation lenguage, framework and library -->
-    <Marquee className="text-white [--duration:40s] [--gap:2rem]" pauseOnHover aria-label="Scroll horizontal infinito">
+    <Marquee className="text-white [--duration:40s] [--gap:2rem]" aria-label="Scroll horizontal infinito">
         <div class="flex items-center gap-8 drop-shadow-2xl">
           {
             skillImportant.map((skill) => (
@@ -35,7 +35,7 @@ import { Particles } from "@/components/magicui/particles";
     
   
     <!-- Tools -->
-    <Marquee className="text-white [--duration:40s] [--gap:2rem]" reverse pauseOnHover aria-label="Scroll horizontal infinito">
+    <Marquee className="text-white [--duration:40s] [--gap:2rem]" reverse aria-label="Scroll horizontal infinito">
       <div class="flex items-center overflow-visible gap-8 drop-shadow-2xl  ">
   {
           tools.map((skill) => (
