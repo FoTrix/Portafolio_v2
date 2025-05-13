@@ -10,8 +10,7 @@ import AtroposComponent from "../atropos/AtroposComponent";
 ---
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Satisfy&display=swap" rel="stylesheet">
-
+<link href="https://fonts.googleapis.com/css2?family=Playwrite+HR+Lijeva:wght@100..400&display=swap" rel="stylesheet">
 <Particles
   className="absolute inset-0 z-0"
   quantity={200}
@@ -35,7 +34,7 @@ import AtroposComponent from "../atropos/AtroposComponent";
         class="text-lg sm:text-xl md:text-2xl uppercase mb-6 sm:mb-8 w-fit mx-auto md:mx-0 text-gray-600 text-shadow-lg underline decoration-amber-500 underline-offset-5 dark:text-gray-300"
       >
       <!-- TODO: este lo cambiamos -->
-      <span class="satisfy-regular text-3xl">Full-Stack Developer</span>
+      <span class="ft-title text-2xl">Full-Stack Developer</span>
       </p>
       <a
         href="/Daniel-Ignacio-Uribe-Pulgar-CV.pdf"
@@ -170,7 +169,10 @@ import AtroposComponent from "../atropos/AtroposComponent";
     filter: blur(2px);
   }
 
-  .satisfy-regular {
-    font-family: "Satisfy", cursive;
+  .ft-title {
+    font-family: "Playwrite HR Lijeva", cursive;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
   }
 </style>

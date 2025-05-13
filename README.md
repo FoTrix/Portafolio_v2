@@ -9,7 +9,7 @@ _____
 - [x] Agregar estilo al Marquee
 - [x] agregar about me
 - [x] Solucionar errores de optimizacion
-- [ ] Cambiar el (titulo full stack)
+- [x] Cambiar el (titulo full stack)
 - [x] Agregar Proyectos en el drawer
 - [ ] Agregar Cursos hechos
 - [ ] Agregar Contactos
