@@ -2,19 +2,19 @@
 import Layout from "../layouts/Layout.astro";
 import { About, Contact, Skill, Header, Courses } from "../components";
 import { SectionPages } from "@/components/dock/SectionPages";
-
-
+import Project from "@/components/project/Project.astro";
 ---
 
 <Layout title="FoTrix - Portafolio">
   <main>
-  <SectionPages client:idle />
-  <Header />
-  <!-- implement -->
-  <About />
-  <Skill />
-  <Courses />
-  <Contact />
-  <!-- implement -->
+    <SectionPages client:idle />
+    <Header />
+    <!-- implement -->
+    <About />
+    <Skill />
+    <Courses />
+    <Project />
+    <Contact />
+    <!-- implement -->
   </main>
 </Layout>

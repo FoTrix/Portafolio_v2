@@ -1,59 +1,59 @@
 ---
-
 const courses = [
   {
     name: "Fundación Forge",
-    description: "En este curso aprendí habilidades socioemocionales y digitales para la empleabilidad, como trabajo en equipo, liderazgo personal, orientación al logro, compromiso con el aprendizaje.",
+    description:
+      "En este curso aprendí habilidades socioemocionales y digitales para la empleabilidad, como trabajo en equipo, liderazgo personal, orientación al logro, compromiso con el aprendizaje.",
     image: "/images/courses/Forge-Fundation.webp",
     date: "07/2024 - actualmente",
   },
   {
     name: "Coding Dojo",
-    description: "En este curso aprendí habilidades técnicas y creativas para el desarrollo web, como HTML, CSS, JavaScript, Git y GitHub, spring boot, java, entre otros.",
+    description:
+      "En este curso aprendí habilidades técnicas y creativas para el desarrollo web, como HTML, CSS, JavaScript, Git y GitHub, spring boot, java, entre otros.",
     image: "/images/courses/coding-dojo.webp",
     date: "07/2024 - 11/2024",
-  }
-]
-
+  },
+];
 ---
 
-<section id="courses-section" class="min-h-responsive w-full flex justify-center items-center px-2">
-
+<section
+  id="courses-section"
+  class="min-h-responsive w-full flex justify-center items-center px-2"
+>
   <div class="w-full max-w-6xl py-16 px-4">
-    <h2 class="text-4xl md:text-5xl font-bold text-center mb-12 bg-gradient-to-r from-accent dark:from-accent-dark to-red-600 bg-clip-text text-transparent">
+    <h2
+      class="text-4xl md:text-5xl font-bold text-center mb-12 bg-gradient-to-r from-accent dark:from-accent-dark to-red-600 bg-clip-text text-transparent"
+    >
       Cursos Realizados
     </h2>
-    
+
     <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
       {
-      courses.map((course) => {
-        const {name, description, image, date} = course;
-        return (
-          <div 
-            class="relative p-6 rounded-xl bg-background/50 dark:bg-neutral-900/50 backdrop-blur-sm border border-border dark:border-neutral-700 hover:bg-accent/5 transition-colors"
-          >
-            <div class="absolute inset-0 rounded-xl bg-gradient-to-br from-accent/10 dark:from-accent-dark/10 to-transparent" />
-            <span class="text-center">
-            <h3 class="text-xl text-center font-semibold mb-3 text-foreground dark:text-neutral-200">
-              {name}
-            </h3>
-            <p class="text-neutral-300 mb-2">{date}</p>
-            </span>
-            <p class="text-muted-foreground dark:text-neutral-400 leading-relaxed mb-4">
-              {description}
-            </p>
-            <img 
-              src={image} 
-              alt={name}
-              class="mx-auto max-h-2/4 w-auto rounded-lg object-cover"
-              loading="lazy"
-            />
-          </div>
-        )
-      })
+        courses.map((course) => {
+          const { name, description, image, date } = course;
+          return (
+            <div class="relative p-6 rounded-xl bg-background/50 dark:bg-neutral-900/50 backdrop-blur-sm border border-border dark:border-neutral-700 hover:bg-accent/5 transition-colors">
+              <div class="absolute inset-0 rounded-xl bg-gradient-to-br from-accent/10 dark:from-accent-dark/10 to-transparent" />
+              <span class="text-center">
+                <h3 class="text-xl text-center font-semibold mb-3 text-foreground dark:text-neutral-200">
+                  {name}
+                </h3>
+                <p class="text-neutral-300 mb-2">{date}</p>
+              </span>
+              <p class="text-muted-foreground dark:text-neutral-400 leading-relaxed mb-4 text-center lg:text-start">
+                {description}
+              </p>
+              <img
+                src={image}
+                alt={name}
+                class="mx-auto max-h-2/4 w-auto rounded-lg object-cover"
+                loading="lazy"
+              />
+            </div>
+          );
+        })
       }
     </div>
   </div>
 </section>
-
-

@@ -1,8 +1,8 @@
-import { useEffect, useRef, useState } from 'react';
+import { useEffect, useRef, useState } from "react";
 
 const ImgAbout = () => {
   const imgRef = useRef(null);
-  const [isDesktop, setIsDesktop] = useState(false); 
+  const [isDesktop, setIsDesktop] = useState(false);
 
   useEffect(() => {
     const checkScreenSize = () => {
@@ -11,10 +11,10 @@ const ImgAbout = () => {
 
     checkScreenSize();
 
-    window.addEventListener('resize', checkScreenSize);
+    window.addEventListener("resize", checkScreenSize);
 
     return () => {
-      window.removeEventListener('resize', checkScreenSize);
+      window.removeEventListener("resize", checkScreenSize);
     };
   }, []);
 
@@ -34,30 +34,32 @@ const ImgAbout = () => {
     };
 
     const handleMouseLeave = () => {
-      imgElement.style.transform = 'perspective(1000px) rotateX(0deg) rotateY(0deg) scale3d(1, 1, 1)';
+      imgElement.style.transform =
+        "perspective(1000px) rotateX(0deg) rotateY(0deg) scale3d(1, 1, 1)";
     };
 
     if (isDesktop) {
-      imgElement.addEventListener('mousemove', handleMouseMove);
-      imgElement.addEventListener('mouseleave', handleMouseLeave);
+      imgElement.addEventListener("mousemove", handleMouseMove);
+      imgElement.addEventListener("mouseleave", handleMouseLeave);
     } else {
-      imgElement.style.transform = 'perspective(1000px) rotateX(0deg) rotateY(0deg) scale3d(1, 1, 1)';
+      imgElement.style.transform =
+        "perspective(1000px) rotateX(0deg) rotateY(0deg) scale3d(1, 1, 1)";
     }
 
     return () => {
-      imgElement.removeEventListener('mousemove', handleMouseMove);
-      imgElement.removeEventListener('mouseleave', handleMouseLeave);
+      imgElement.removeEventListener("mousemove", handleMouseMove);
+      imgElement.removeEventListener("mouseleave", handleMouseLeave);
     };
   }, [isDesktop]);
 
   return (
-    <div style={{ perspective: '1000px' }}>
-      <img 
+    <div style={{ perspective: "1000px" }}>
+      <img
         ref={imgRef}
         src="/images/about/About.webp"
         alt="Acerca de mí"
         className="w-full max-w-md h-auto rounded-lg shadow-lg transition-transform duration-300 ease-out"
-        style={{ transformStyle: 'preserve-3d' }}
+        style={{ transformStyle: "preserve-3d" }}
       />
     </div>
   );

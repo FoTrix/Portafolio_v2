@@ -1,17 +1,17 @@
 ---
 import { Icon } from "astro-icon/components";
 
-
 interface SkillProps {
-    name: string;
-    icon: string;
+  name: string;
+  icon: string;
 }
 
-const {name, icon} = Astro.props;
+const { name, icon } = Astro.props;
 ---
 
-
-    <article class="grid h-20 w-2/4 z-10 place-items-center py-5 rounded-md relative">
-        <div class="absolute -z-10 size-full rounded-md bg-neutral-900"></div>
-        <Icon name={icon} size={"full"} />
-    </article>
+<article
+  class="grid h-20 w-2/4 z-10 place-items-center py-5 rounded-md relative"
+>
+  <div class="absolute -z-10 size-full rounded-md bg-neutral-900"></div>
+  <Icon name={icon} size={"full"} />
+</article>

@@ -1,11 +1,10 @@
 ---
-import Layout from "../layouts/Layout.astro"
-import { SectionPages } from "@/components/dock/SectionPages"
-
+import Layout from "../layouts/Layout.astro";
+import { SectionPages } from "@/components/dock/SectionPages";
 ---
 
 <Layout title="Test">
-    <main class="grid place-content-center h-screen w-full">
-        <SectionPages client:idle />
-    </main>
+  <main class="grid place-content-center h-screen w-full">
+    <SectionPages client:idle />
+  </main>
 </Layout>

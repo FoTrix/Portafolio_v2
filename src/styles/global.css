@@ -27,7 +27,6 @@
 }
 
 @theme inline {
-
   --animate-aurora: aurora 8s ease-in-out infinite alternate;
 
   --animate-meteor: meteor 5s linear infinite;
@@ -94,75 +93,74 @@
 
   --color-background: var(--background);
 
-@keyframes meteor {
-      0% {
-        transform: rotate(var(--angle)) translateX(0);
-        opacity: 1;
-      }
-      70% {
-        opacity: 1;
-      }
-      100% {
-        transform: rotate(var(--angle)) translateX(-500px);
-        opacity: 0;
-      }
+  @keyframes meteor {
+    0% {
+      transform: rotate(var(--angle)) translateX(0);
+      opacity: 1;
     }
-
-    @keyframes aurora {
-      0% {
-        background-position: 0% 50%;
-        transform: rotate(-5deg) scale(0.9);
-      }
-      25% {
-        background-position: 50% 100%;
-        transform: rotate(5deg) scale(1.1);
-      }
-      50% {
-        background-position: 100% 50%;
-        transform: rotate(-3deg) scale(0.95);
-      }
-      75% {
-        background-position: 50% 0%;
-        transform: rotate(3deg) scale(1.05);
-      }
-      100% {
-        background-position: 0% 50%;
-        transform: rotate(-5deg) scale(0.9);
-      }
+    70% {
+      opacity: 1;
     }
+    100% {
+      transform: rotate(var(--angle)) translateX(-500px);
+      opacity: 0;
+    }
+  }
 
-    --radius-sm: calc(var(--radius) - 4px);
+  @keyframes aurora {
+    0% {
+      background-position: 0% 50%;
+      transform: rotate(-5deg) scale(0.9);
+    }
+    25% {
+      background-position: 50% 100%;
+      transform: rotate(5deg) scale(1.1);
+    }
+    50% {
+      background-position: 100% 50%;
+      transform: rotate(-3deg) scale(0.95);
+    }
+    75% {
+      background-position: 50% 0%;
+      transform: rotate(3deg) scale(1.05);
+    }
+    100% {
+      background-position: 0% 50%;
+      transform: rotate(-5deg) scale(0.9);
+    }
+  }
 
-    --radius-md: calc(var(--radius) - 2px);
+  --radius-sm: calc(var(--radius) - 4px);
 
-    --radius-lg: var(--radius);
+  --radius-md: calc(var(--radius) - 2px);
 
-    --radius-xl: calc(var(--radius) + 4px);
+  --radius-lg: var(--radius);
 
-    --animate-marquee: marquee var(--duration) infinite linear;
+  --radius-xl: calc(var(--radius) + 4px);
 
-    --animate-marquee-vertical: marquee-vertical var(--duration) linear infinite;
-    
+  --animate-marquee: marquee var(--duration) infinite linear;
+
+  --animate-marquee-vertical: marquee-vertical var(--duration) linear infinite;
+
   @keyframes marquee {
-  from {
-    transform: translateX(0);
+    from {
+      transform: translateX(0);
     }
-  to {
-    transform: translateX(calc(-100% - var(--gap)));
+    to {
+      transform: translateX(calc(-100% - var(--gap)));
     }
   }
   @keyframes marquee-vertical {
-  from {
-    transform: translateY(0);
+    from {
+      transform: translateY(0);
     }
-  to {
-    transform: translateY(calc(-100% - var(--gap)));
+    to {
+      transform: translateY(calc(-100% - var(--gap)));
     }
   }
 }
 
 :root {
-
   --radius: 0.625rem;
 
   --background: oklch(1 0 0);
@@ -225,12 +223,10 @@
 
   --sidebar-border: oklch(0.922 0 0);
 
-  --sidebar-ring: oklch(0.708 0 0)
-
+  --sidebar-ring: oklch(0.708 0 0);
 }
 
 .dark {
-
   --background: oklch(0.145 0 0);
 
   --foreground: oklch(0.985 0 0);
@@ -291,13 +287,12 @@
 
   --sidebar-border: oklch(1 0 0 / 10%);
 
-  --sidebar-ring: oklch(0.556 0 0)
-
+  --sidebar-ring: oklch(0.556 0 0);
 }
 
 @layer components {
   .sombra {
-      @apply filter drop-shadow-lg select-none;
+    @apply filter drop-shadow-lg select-none;
   }
 }
 
@@ -309,7 +304,3 @@
     @apply bg-background text-foreground;
   }
 }
-
-
-
-

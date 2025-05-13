@@ -15,7 +15,6 @@ export default defineConfig({
       exclude: ["debug"],
     },
   },
-  
 
   adapter: netlify(),
   integrations: [icon(), react()],

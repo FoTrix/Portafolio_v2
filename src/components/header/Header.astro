@@ -1,16 +1,19 @@
 ---
 import { Icon } from "astro-icon/components";
-import { iconsFloat} from "../../data/dataHeader.json";
+import { iconsFloat } from "../../data/dataHeader.json";
 import { Meteors } from "../magicui/meteors";
 
 import { Particles } from "@/components/magicui/particles";
 import { Title } from "./Title";
 import AtroposComponent from "../atropos/AtroposComponent";
-
 ---
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Playwrite+HR+Lijeva:wght@100..400&display=swap" rel="stylesheet">
+
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link
+  href="https://fonts.googleapis.com/css2?family=Playwrite+HR+Lijeva:wght@100..400&display=swap"
+  rel="stylesheet"
+/>
 <Particles
   className="absolute inset-0 z-0"
   quantity={200}
@@ -29,12 +32,15 @@ import AtroposComponent from "../atropos/AtroposComponent";
     class="container z-10 inset-shadow-white p-4 rounded-4xl mx-auto px-4 sm:px-6 md:px-10 py-6 sm:py-8 md:py-20 relative grid grid-cols-1 md:grid-cols-2 gap-8 place-items-center"
   >
     <div class="text-center md:text-left">
-        <Title/>
+      <Title />
       <p
         class="text-lg sm:text-xl md:text-2xl uppercase mb-6 sm:mb-8 w-fit mx-auto md:mx-0 text-gray-600 text-shadow-lg underline decoration-amber-500 underline-offset-5 dark:text-gray-300"
       >
-      <!-- TODO: este lo cambiamos -->
-      <span class="ft-title text-base sm:text-lg md:text-lg lg:text-xl xl:text-xl flex-1 whitespace-nowrap overflow-hidden text-ellipsis transition-all duration-300 ease-in-out hover:scale-105">Full-Stack Developer</span>
+        <!-- TODO: este lo cambiamos -->
+        <span
+          class="ft-title text-base sm:text-lg md:text-lg lg:text-xl xl:text-xl flex-1 whitespace-nowrap overflow-hidden text-ellipsis transition-all duration-300 ease-in-out hover:scale-105"
+          >Full-Stack Developer</span
+        >
       </p>
       <a
         href="/CV/Daniel-Ignacio-Uribe-Pulgar-CV.pdf"
@@ -61,14 +67,12 @@ import AtroposComponent from "../atropos/AtroposComponent";
     </div>
   </div>
 
-    
-
   <div
     class="absolute overflow-hidden inset-0 z-0 hidden md:block"
     id="parallax-container"
   >
     {
-      iconsFloat.map((icon : any) => (
+      iconsFloat.map((icon: any) => (
         <div
           class="icon-wrapper absolute"
           style={`top: 0; left: 0; ${icon.position.includes("top") ? `top: ${icon.position.match(/top-\[([^%]+)%\]/)[1]}%` : ""};
@@ -92,7 +96,6 @@ import AtroposComponent from "../atropos/AtroposComponent";
       ))
     }
   </div>
-
 </section>
 
 <script src="../../helpers/header.ts"></script>
@@ -132,7 +135,6 @@ import AtroposComponent from "../atropos/AtroposComponent";
     }
   }
 
-
   .text-focus-in {
     -webkit-animation: text-focus-in 0.7s cubic-bezier(0.55, 0.085, 0.68, 0.53)
       both;
@@ -171,8 +173,8 @@ import AtroposComponent from "../atropos/AtroposComponent";
 
   .ft-title {
     font-family: "Playwrite HR Lijeva", cursive;
-  font-optical-sizing: auto;
-  font-weight: 400;
-  font-style: normal;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
   }
 </style>

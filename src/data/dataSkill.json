@@ -1,86 +1,86 @@
 {
-    "skillImportant": [
-      {
-        "icon": "skill-icons:react-dark",
-        "name": "React"
-      },
-      {
-        "icon": "skill-icons:git",
-        "name": "Git"
-      },
-      {
-        "icon": "skill-icons:javascript",
-        "name": "JavaScript"
-      },
-      {
-        "icon": "skill-icons:java-dark",
-        "name": "Java"
-      },
-      {
-        "icon": "skill-icons:spring-dark",
-        "name": "Spring Boot"
-      },
-      { 
-        "icon": "skill-icons:mysql-dark", 
-        "name": "MySQL"
-      },
-      {
-        "icon": "skill-icons:html",
-        "name": "HTML"
-      },
-      {
-        "icon": "vscode-icons:file-type-css",
-        "name": "CSS"
-      },
-      {
-        "icon": "vscode-icons:file-type-astro",
-        "name": "Astro"
-      },
-      {
-        "icon": "skill-icons:tailwindcss-dark",
-        "name": "TailwindCSS"
-      },
-      {
-        "icon": "skill-icons:typescript",
-        "name": "TypeScript"
-      },
-      {
-        "icon": "skill-icons:materialui-dark",
-        "name": "Material UI"
-      },
-      {
-        "icon": "skill-icons:bootstrap",
-        "name": "Bootstrap"
-      },
-      {
-        "icon": "skill-icons:nodejs-dark",
-        "name": "NodeJS"
-      }
-    ],
-    "tools": [
-      {
-        "icon": "skill-icons:vscode-dark",
-        "name": "VS Code"
-      },
-      {
-        "icon": "skill-icons:postman",
-        "name": "Postman"
-      },
-      {
-        "icon": "skill-icons:apple-dark",
-        "name": "MacOS"
-      },
-      {
-        "icon": "skill-icons:bun-dark",
-        "name": "Bun"
-      },
-      {
-        "icon": "skill-icons:notion-dark",
-        "name": "Notion"
-      },
-      {
-        "icon": "skill-icons:github-dark", 
-        "name": "GitHub"
-      }
-    ]
-  } 
+  "skillImportant": [
+    {
+      "icon": "skill-icons:react-dark",
+      "name": "React"
+    },
+    {
+      "icon": "skill-icons:git",
+      "name": "Git"
+    },
+    {
+      "icon": "skill-icons:javascript",
+      "name": "JavaScript"
+    },
+    {
+      "icon": "skill-icons:java-dark",
+      "name": "Java"
+    },
+    {
+      "icon": "skill-icons:spring-dark",
+      "name": "Spring Boot"
+    },
+    {
+      "icon": "skill-icons:mysql-dark",
+      "name": "MySQL"
+    },
+    {
+      "icon": "skill-icons:html",
+      "name": "HTML"
+    },
+    {
+      "icon": "vscode-icons:file-type-css",
+      "name": "CSS"
+    },
+    {
+      "icon": "vscode-icons:file-type-astro",
+      "name": "Astro"
+    },
+    {
+      "icon": "skill-icons:tailwindcss-dark",
+      "name": "TailwindCSS"
+    },
+    {
+      "icon": "skill-icons:typescript",
+      "name": "TypeScript"
+    },
+    {
+      "icon": "skill-icons:materialui-dark",
+      "name": "Material UI"
+    },
+    {
+      "icon": "skill-icons:bootstrap",
+      "name": "Bootstrap"
+    },
+    {
+      "icon": "skill-icons:nodejs-dark",
+      "name": "NodeJS"
+    }
+  ],
+  "tools": [
+    {
+      "icon": "skill-icons:vscode-dark",
+      "name": "VS Code"
+    },
+    {
+      "icon": "skill-icons:postman",
+      "name": "Postman"
+    },
+    {
+      "icon": "skill-icons:apple-dark",
+      "name": "MacOS"
+    },
+    {
+      "icon": "skill-icons:bun-dark",
+      "name": "Bun"
+    },
+    {
+      "icon": "skill-icons:notion-dark",
+      "name": "Notion"
+    },
+    {
+      "icon": "skill-icons:github-dark",
+      "name": "GitHub"
+    }
+  ]
+}

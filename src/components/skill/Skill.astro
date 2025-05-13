@@ -1,5 +1,5 @@
 ---
-import { Marquee } from "@/components/magicui/marquee"
+import { Marquee } from "@/components/magicui/marquee";
 import { skillImportant, tools } from "@/data/dataSkill.json";
 import SkillComponent from "./SkillComponent.astro";
 import { Particles } from "@/components/magicui/particles";
@@ -18,34 +18,36 @@ import { Particles } from "@/components/magicui/particles";
   id="skill-section"
   class="z-10 relative overflow-hidden w-full grid place-items-center"
 >
-
-  <div class="relative flex w-full flex-col items-center justify-center overflow-x-hidden">
-  
+  <div
+    class="relative flex w-full flex-col items-center justify-center overflow-x-hidden"
+  >
     <!-- programation lenguage, framework and library -->
-    <Marquee className="text-white [--duration:40s] [--gap:2rem]" aria-label="Scroll horizontal infinito">
-        <div class="flex items-center gap-8 drop-shadow-2xl">
-          {
-            skillImportant.map((skill) => (
-              <SkillComponent {...skill}/>
-              )
-            )
-          }
-        </div>
-    </Marquee>
-    
-  
-    <!-- Tools -->
-    <Marquee className="text-white [--duration:40s] [--gap:2rem]" reverse aria-label="Scroll horizontal infinito">
-      <div class="flex items-center overflow-visible gap-8 drop-shadow-2xl  ">
-  {
-          tools.map((skill) => (
-            <SkillComponent {...skill}/>
-            )
-          )
-  }
+    <Marquee
+      className="text-white [--duration:40s] [--gap:2rem]"
+      aria-label="Scroll horizontal infinito"
+    >
+      <div class="flex items-center gap-8 drop-shadow-2xl">
+        {skillImportant.map((skill) => <SkillComponent {...skill} />)}
       </div>
     </Marquee>
-    <div class="pointer-events-none absolute inset-y-0 left-0 w-1/4 bg-gradient-to-r from-accent"></div>
-    <div class="pointer-events-none absolute inset-y-0 right-0 w-1/4 bg-gradient-to-l from-accent"></div>
+
+    <!-- Tools -->
+    <Marquee
+      className="text-white [--duration:40s] [--gap:2rem]"
+      reverse
+      aria-label="Scroll horizontal infinito"
+    >
+      <div class="flex items-center overflow-visible gap-8 drop-shadow-2xl">
+        {tools.map((skill) => <SkillComponent {...skill} />)}
+      </div>
+    </Marquee>
+    <div
+      class="pointer-events-none absolute inset-y-0 left-0 w-1/4 bg-gradient-to-r from-accent"
+    >
+    </div>
+    <div
+      class="pointer-events-none absolute inset-y-0 right-0 w-1/4 bg-gradient-to-l from-accent"
+    >
+    </div>
   </div>
 </section>
