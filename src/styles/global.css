@@ -86,6 +86,9 @@
   body {
     @apply h-full p-0 m-0;
   }
+  html {
+    overflow-y: scroll;
+  }
   *,
   *::before,
   *::after {

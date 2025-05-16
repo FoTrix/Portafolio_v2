@@ -66,7 +66,7 @@ const SocialDrawer: React.FC<SocialDrawerProps> = ({ isOpen, onClose }) => {
           animate={{ opacity: 1, y: 0, scale: 1 }}
           exit={{ opacity: 0, y: 10, scale: 0.95 }}
           transition={{ duration: 0.15, ease: "easeOut" }}
-          className="fixed bottom-20 left-[calc(50%-130px)] -translate-x-1/2 p-2 bg-background/80 dark:bg-neutral-900/80 backdrop-blur-md border border-border dark:border-neutral-700 rounded-lg shadow-lg flex flex-col space-y-1.5 items-center z-20"
+          className="fixed bottom-20 left-1/2 -translate-x-1/2 p-2 bg-background/80 dark:bg-neutral-900/80 backdrop-blur-md border border-border dark:border-neutral-700 rounded-lg shadow-lg flex flex-col space-y-1.5 items-center z-20"
           style={{ minWidth: "55px" }}
         >
           {socialLinks.map((link) => {

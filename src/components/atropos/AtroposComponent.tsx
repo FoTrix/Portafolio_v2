@@ -31,7 +31,7 @@ const AtroposComponent = () => {
           <img
             src="/images/header/avatar.webp"
             alt="avatar"
-            className="backdrop-blur-md size-full relative -bottom-6 z-30 object-contain sombra"
+            className="backdrop-blur-md size-full relative z-30 object-contain sombra object-center"
           />
         </div>
       ) : (

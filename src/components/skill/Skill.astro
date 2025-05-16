@@ -2,17 +2,8 @@
 import { Marquee } from "@/components/magicui/marquee";
 import { skillImportant, tools } from "@/data/dataSkill.json";
 import SkillComponent from "./SkillComponent.astro";
-import { Particles } from "@/components/magicui/particles";
 ---
 
-<Particles
-  className="absolute inset-0 z-0"
-  quantity={100}
-  ease={80}
-  color="black"
-  refresh
-  client:visible
-/>
 
 <section
   id="skill-section"

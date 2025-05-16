@@ -18,8 +18,9 @@ const { title } = Astro.props;
     <title>{title}</title>
   </head>
   <body
-    class="dark:bg-neutral-900 dark:text-gray-100 bg-gray-100 text-gray-900 transition-color duration-800 min-h-screen"
+    class="dark:bg-neutral-900 dark:text-gray-100 bg-gray-100 text-gray-900 transition-color duration-800 min-h-screen overflow-x-hidden"
   >
+
     <slot />
     <footer
       class="mt-auto h-70 pt-10 bg-neutral-700/80 text-gray-100"

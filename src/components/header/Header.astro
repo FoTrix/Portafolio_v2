@@ -2,8 +2,6 @@
 import { Icon } from "astro-icon/components";
 import { iconsFloat } from "../../data/dataHeader.json";
 import { Meteors } from "../magicui/meteors";
-
-import { Particles } from "@/components/magicui/particles";
 import { Title } from "./Title";
 import AtroposComponent from "../atropos/AtroposComponent";
 ---
@@ -14,13 +12,7 @@ import AtroposComponent from "../atropos/AtroposComponent";
   href="https://fonts.googleapis.com/css2?family=Playwrite+HR+Lijeva:wght@100..400&display=swap"
   rel="stylesheet"
 />
-<Particles
-  className="absolute inset-0 z-0"
-  quantity={200}
-  ease={80}
-  refresh
-  client:idle
-/>
+
 
 <section
   id="header-section"
@@ -38,7 +30,7 @@ import AtroposComponent from "../atropos/AtroposComponent";
       >
         <!-- TODO: este lo cambiamos -->
         <span
-          class="ft-title text-base sm:text-lg md:text-lg lg:text-xl xl:text-xl flex-1 whitespace-nowrap overflow-hidden text-ellipsis transition-all duration-300 ease-in-out hover:scale-105"
+          class="ft-title text-base sm:text-lg md:text-lg lg:text-xl xl:text-xl whitespace-nowrap overflow-hidden text-ellipsis transition-all duration-300 ease-in-out hover:scale-105"
           >Full-Stack Developer</span
         >
       </p>
