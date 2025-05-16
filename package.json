@@ -9,8 +9,9 @@
     "astro": "astro"
   },
   "dependencies": {
-    "@astrojs/netlify": "^6.3.2",
+    "@astrojs/netlify": "^6.3.3",
     "@astrojs/react": "4.2.7",
+    "@emailjs/browser": "^4.4.1",
     "@fortawesome/fontawesome-svg-core": "^6.7.2",
     "@fortawesome/free-brands-svg-icons": "^6.7.2",
     "@fortawesome/free-regular-svg-icons": "^6.7.2",
@@ -29,6 +30,7 @@
     "motion": "^12.11.0",
     "react": "^19.1.0",
     "react-dom": "^19.1.0",
+    "resend": "^4.5.1",
     "tailwind-merge": "^3.2.0",
     "tailwindcss": "^4.1.4",
     "tw-animate-css": "1.2.5"

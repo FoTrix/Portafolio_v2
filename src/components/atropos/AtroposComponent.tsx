@@ -2,29 +2,24 @@ import { useState, useEffect } from "react";
 import Atropos from "atropos/react";
 import "atropos/css";
 
-// Helper function to check if running in a browser environment
 const isBrowser = typeof window !== "undefined";
 
 const AtroposComponent = () => {
-  // Initialize state based on current width if in browser, otherwise default to false
   const [isMobile, setIsMobile] = useState(
     isBrowser ? window.innerWidth < 768 : false,
-  ); // Adjusted breakpoint back to 768px
+  );
 
   useEffect(() => {
-    // Ensure this effect only runs in the browser
     if (!isBrowser) return;
 
     const checkScreenSize = () => {
-      setIsMobile(window.innerWidth < 768); // Adjusted breakpoint back to 768px
+      setIsMobile(window.innerWidth < 768);
     };
 
-    // Listener for window resize
     window.addEventListener("resize", checkScreenSize);
 
-    // Cleanup listener on component unmount
     return () => window.removeEventListener("resize", checkScreenSize);
-  }, []); // Dependency array is empty, runs once on mount
+  }, []);
 
   return (
     <article
@@ -32,7 +27,6 @@ const AtroposComponent = () => {
       data-atropos-offset="5"
     >
       {isMobile ? (
-        // Render simple image on mobile
         <div className="size-full z-20 rounded-full">
           <img
             src="/images/header/avatar.webp"
@@ -41,7 +35,6 @@ const AtroposComponent = () => {
           />
         </div>
       ) : (
-        // Render Atropos component on larger screens
         <Atropos
           className="size-full"
           rotateXMax={5}

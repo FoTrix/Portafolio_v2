@@ -1,19 +1,19 @@
 ---
-// Contacts
-import { Particles } from "@/components/magicui/particles";
+import Form from "./Form";
+
+
+
 ---
 
-<Particles
-  className="absolute inset-0 z-0"
-  quantity={100}
-  ease={80}
-  color="black"
-  refresh
-  client:visible
-/>
-<section
-  id="contact-section"
-  class="min-h-responsive grid place-content-center z-10"
->
-  <h1 class="text-center text-4xl">Contact</h1>
+
+<section class="min-h-dvh grid place-content-center">
+    <div class="container flex flex-col md:flex-row gap-6 mx-auto p-4">
+      <div class="w-full md:w-2/5 text-center md:text-left grid place-items-center">
+        <h2 class="text-bold text-neutral-600/70  dark:text-neutral-300 text-2xl">¡Envia tu Correo!</h2>
+      </div>
+      <div class="w-full md:w-3/5 flex">
+        <Form client:load/>
+      </div>
+    </div>
+
 </section>
