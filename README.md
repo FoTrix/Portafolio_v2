@@ -13,7 +13,7 @@
 - [x] Cambiar el (titulo full stack)
 - [x] Agregar Proyectos en el drawer
 - [x] Agregar Cursos hechos
-- [ ] Agregar Contactos
+- [x] Agregar Contactos
 - [x] Footer
 - [ ] Agregar Verificacion de robot
 
