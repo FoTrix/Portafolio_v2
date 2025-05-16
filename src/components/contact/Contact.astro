@@ -1,15 +1,14 @@
 ---
+import { AuroraText } from "../magicui/aurora-text";
 import Form from "./Form";
-
-
-
 ---
+
 
 
 <section class="min-h-dvh grid place-content-center">
     <div class="container flex flex-col md:flex-row gap-6 mx-auto p-4">
       <div class="w-full md:w-2/5 text-center md:text-left grid place-items-center">
-        <h2 class="text-bold text-neutral-600/70  dark:text-neutral-300 text-2xl">¡Envia tu Correo!</h2>
+       <AuroraText className="roboto-400 text-3xl"> ¡Envia tu Correo! </AuroraText>
       </div>
       <div class="w-full md:w-3/5 flex">
         <Form client:load/>

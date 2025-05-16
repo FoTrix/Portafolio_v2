@@ -31,42 +31,40 @@ const Form = () => {
 
   return (
     <>
-      <form onSubmit={handleSubmit} className="bg-gray-700/20 rounded-2xl overflow-hidden py-2 px-3 space-y-5">
+      <form onSubmit={handleSubmit} className="backdrop-blur-md bg-amber-900/80 rounded-2xl overflow-hidden py-4 px-5 space-y-4 shadow-lg border border-amber-600/20">
         <input 
         type="email"
         name="email"
         value={form.email}
-        placeholder="ingresa tu correo"
+        placeholder="Ingresa tu correo"
         onChange={handleChange}
-        className="dark:text-gray-200 text-neutral-900 w-full px-4 py-2 rounded-md bg-gray-700/30 focus:outline-none focus:ring-2 focus:ring-amber-600/60"
+        className="text-gray-200 w-full px-4 py-3 rounded-xl bg-amber-800/90 border border-amber-600/30 focus:outline-none focus:ring-2 focus:ring-amber-600/60 transition-all duration-300 ease-in-out hover:border-amber-500/50"
         required
         />
         <input 
         type="text" 
         name="subject"
-        placeholder="ingresa el asunto"
+        placeholder="Ingresa el asunto"
         value={form.subject}
         onChange={handleChange}
-        className="dark:text-gray-200 text-neutral-900 w-full px-4 py-2 rounded-md bg-gray-700/30 focus:outline-none focus:ring-2 focus:ring-amber-600/60"
+        className="text-gray-200 w-full px-4 py-3 rounded-xl bg-amber-800/90 border border-amber-600/30 focus:outline-none focus:ring-2 focus:ring-amber-600/60 transition-all duration-300 ease-in-out hover:border-amber-500/50"
         required
         />
         <textarea
         name="message"
-        placeholder="ingresa tu mensaje"
+        placeholder="Ingresa tu mensaje"
         value={form.message}
         onChange={handleChange}
-        className="dark:text-gray-200 text-neutral-900 w-full px-4 py-2 rounded-md bg-gray-700/30 focus:outline-none focus:ring-2 focus:ring-amber-600/60"
+        className="text-gray-200 w-full px-4 py-3 rounded-xl bg-amber-800/90 border border-amber-600/30 focus:outline-none focus:ring-2 focus:ring-amber-600/60 transition-all duration-300 ease-in-out hover:border-amber-500/50 min-h-[120px] resize-y"
         required
         />
 
-    <div className="overflow-hidden">
-        <button type="submit" className="dark:bg-amber-600/40 bg-amber-600/80  cursor-pointer text-white px-4 py-2 w-full rounded-b-2xl transition-all duration-200 ease-in-out hover:scale-110 active:scale-130">
-            enviar
-        </button>
-    </div>
-    {status && <p className="dark:text-cyan-600 ">{status}</p>}    
-
-
+        <div className="overflow-hidden pt-2">
+          <button type="submit" className="dark:bg-amber-600/60 bg-amber-600/90 cursor-pointer text-white font-medium px-6 py-3 w-full rounded-xl transition-all duration-300 ease-in-out hover:scale-[1.02] hover:bg-amber-500/90 dark:hover:bg-amber-500/70 shadow-md hover:shadow-amber-600/30">
+            Enviar
+          </button>
+        </div>
+        {status && <p className="text-center py-2 text-amber-400 font-medium transition-all duration-300 ease-in-out">{status}</p>}    
       </form>
     </>
   )
