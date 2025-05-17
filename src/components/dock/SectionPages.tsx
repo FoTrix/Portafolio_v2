@@ -166,7 +166,7 @@ export const SectionPages = () => {
 
         <DockIcon>
           <a
-            href="#skill-section"
+            href="#courses-section"
             className="block size-full"
             aria-label="Ir a la sección de cursos"
           >

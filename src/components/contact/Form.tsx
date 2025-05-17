@@ -31,14 +31,14 @@ const Form = () => {
 
   return (
     <>
-      <form onSubmit={handleSubmit} className="backdrop-blur-md bg-amber-900/80 rounded-2xl overflow-hidden py-4 px-5 space-y-4 shadow-lg border border-amber-600/20">
+      <form onSubmit={handleSubmit} className="backdrop-blur-md bg-red-200/60 rounded-2xl overflow-hidden py-4 px-5 space-y-4 shadow-lg border border-red-200/80">
         <input 
         type="email"
         name="email"
         value={form.email}
         placeholder="Ingresa tu correo"
         onChange={handleChange}
-        className="text-gray-200 w-full px-4 py-3 rounded-xl bg-amber-800/90 border border-amber-600/30 focus:outline-none focus:ring-2 focus:ring-amber-600/60 transition-all duration-300 ease-in-out hover:border-amber-500/50"
+        className="text-gray-200 w-full px-4 py-3 rounded-xl bg-red-200/60 border border-red-300/80 focus:outline-none focus:ring-2 focus:ring-amber-600/60 transition-all duration-300 ease-in-out hover:border-amber-500/50"
         required
         />
         <input 

@@ -1,5 +1,7 @@
 ---
+import { Particles } from "@/components/magicui/particles";
 import "../styles/global.css";
+import Footer from "@/components/footer/Footer.astro";
 
 interface Props {
   title: string;
@@ -18,36 +20,14 @@ const { title } = Astro.props;
     <title>{title}</title>
   </head>
   <body
-    class="dark:bg-neutral-900 dark:text-gray-100 bg-gray-100 text-gray-900 transition-color duration-800 min-h-screen overflow-x-hidden"
+    class="relative dark:bg-neutral-900 dark:text-gray-100 bg-gray-100 text-gray-900 transition-color duration-800 overflow-x-hidden"
   >
-
+<Particles
+className="absolute inset-0"
+client:idle
+/>
     <slot />
-    <footer
-      class="mt-auto h-70 pt-10 bg-neutral-700/80 text-gray-100"
-    >
-      <div class="max-w-6xl mx-auto">
-        <div
-          class="grid grid-cols-1 gap-8 place-items-center text-center"
-        >
-          <div class="grid">
-            <h3 class="text-lg font-bold mb-4  text-blue-300">
-              Legal
-            </h3>
-            <p class="text-sm opacity-75">
-              © 2025 FoTrixOfficial. Todos los derechos reservados.
-            </p>
-            <p class="text-xs mt-2 mb-3 opacity-60">
-              Desarrollado con Astro + React + Tailwind CSS
-            </p>
-            <p class="text-xs opacity-60 hover:opacity-100 transition-opacity">
-              <a href="https://github.com/FoTrix/Portafolio_v2" target="_blank" rel="noopener" class="underline">
-                Ver repositorio en GitHub
-              </a>
-            </p>
-          </div>
-        </div>
-      </div>
-    </footer>
+<Footer/>
   </body>
 </html>
 

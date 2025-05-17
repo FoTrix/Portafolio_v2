@@ -2,16 +2,16 @@
 import { Icon } from "astro-icon/components";
 
 interface Props {
-  name: string;
+
   icon: string;
 }
 
-const { name, icon } = Astro.props;
+const { icon } = Astro.props;
 ---
 
 <article
-  class="grid h-16 w-16 z-10 place-items-center p-2 rounded-md relative"
+  class="grid h-12 w-12 sm:h-16 sm:w-16 z-10 place-items-center p-1 sm:p-2 rounded-md relative"
 >
-  <div class="absolute -z-10 size-full rounded-md bg-neutral-900"></div>
+  <div class="absolute -z-10 inset-0 rounded-md bg-neutral-900"></div>
   <Icon name={icon} size={"full"} />
 </article>
