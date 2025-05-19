@@ -10,8 +10,8 @@ const { icon } = Astro.props;
 ---
 
 <article
-  class="grid h-12 w-12 sm:h-16 sm:w-16 z-10 place-items-center p-1 sm:p-2 rounded-md relative"
+  class="grid h-14 w-14 sm:h-20 sm:w-20 z-10 place-items-center p-1.5 sm:p-3 rounded-xl relative shadow-lg border border-neutral-800/60 bg-gradient-to-br from-neutral-900/90 via-neutral-800/80 to-neutral-900/60 hover:scale-105 transition-transform duration-300"
 >
-  <div class="absolute -z-10 inset-0 rounded-md bg-neutral-900"></div>
-  <Icon name={icon} size={"full"} />
+  <div class="absolute -z-10 inset-0 rounded-xl bg-neutral-900/80 blur-sm"></div>
+  <Icon name={icon} size={"full"} class="text-accent drop-shadow-md" />
 </article>
