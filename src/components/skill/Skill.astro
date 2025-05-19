@@ -6,14 +6,14 @@ import SkillComponent from "./SkillComponent.astro";
 
 <section
   id="skill-section"
-  class="z-10 relative overflow-hidden w-full grid place-items-center py-8 sm:py-14 bg-gradient-to-b from-neutral-950/90 via-neutral-900/80 to-neutral-900/60"
+  class="z-10 relative overflow-hidden w-full grid place-items-center py-8 sm:py-14 bg-gradient-to-b from-gray-100/90 via-gray-200/80 to-gray-200/60 dark:from-neutral-950/90 dark:via-neutral-900/80 dark:to-neutral-900/60"
 >
   <div
     class="relative flex w-full flex-col items-center justify-center overflow-x-hidden gap-8"
   >
     <!-- programation lenguage, framework and library -->
     <Marquee
-      className="text-white [--duration:38s] [--gap:1.5rem] sm:[--gap:2.5rem] drop-shadow-xl"
+      className="text-gray-800 dark:text-white [--duration:38s] [--gap:1.5rem] sm:[--gap:2.5rem] drop-shadow-xl"
       aria-label="Scroll horizontal infinito"
     >
       <div class="flex items-center gap-6 sm:gap-12 drop-shadow-2xl">
@@ -23,7 +23,7 @@ import SkillComponent from "./SkillComponent.astro";
 
     <!-- Tools -->
     <Marquee
-      className="text-white [--duration:38s] [--gap:1.5rem] sm:[--gap:2.5rem] drop-shadow-xl"
+      className="text-gray-800 dark:text-white [--duration:38s] [--gap:1.5rem] sm:[--gap:2.5rem] drop-shadow-xl"
       reverse
       aria-label="Scroll horizontal infinito"
     >
