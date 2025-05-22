@@ -3,18 +3,26 @@ import { AuroraText } from "../magicui/aurora-text";
 import Form from "./Form";
 ---
 
-<section id="contact-section" class="min-h-dvh py-16 flex flex-col justify-center items-center">
-    <div class="container mx-auto px-4 max-w-4xl">
-        <div class="text-center mb-12">
-            <h2 class="text-4xl md:text-5xl font-bold mb-4 text-neutral-800 dark:text-neutral-100">
-                <AuroraText client:load>Contáctame</AuroraText>
-            </h2>
-            <p class="text-lg text-neutral-600 dark:text-neutral-300 max-w-2xl mx-auto">
-                ¿Tienes un proyecto en mente? Envíame un mensaje y conversemos sobre cómo puedo ayudarte.
-            </p>
-        </div>
-        <div class="w-full">
-            <Form client:load />
-        </div>
+<section
+  id="contact-section"
+  class="min-h-dvh py-16 flex flex-col justify-center items-center"
+>
+  <div class="container mx-auto px-4 max-w-4xl">
+    <div class="text-center mb-12">
+      <h2
+        class="text-4xl md:text-5xl font-bold mb-4 text-neutral-800 dark:text-neutral-100"
+      >
+        <AuroraText client:load>Contáctame</AuroraText>
+      </h2>
+      <p
+        class="text-lg text-neutral-600 dark:text-neutral-300 max-w-2xl mx-auto"
+      >
+        ¿Tienes un proyecto en mente? Envíame un mensaje y conversemos sobre
+        cómo puedo ayudarte.
+      </p>
     </div>
+    <div class="w-full">
+      <Form client:load />
+    </div>
+  </div>
 </section>

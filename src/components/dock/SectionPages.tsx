@@ -84,14 +84,7 @@ const SocialDrawer: React.FC<SocialDrawerProps> = ({ isOpen, onClose }) => {
               </a>
             );
           })}
-          <a
-            href="/project"
-            rel="noopener noreferrer"
-            aria-label="Ir a la sección de proyectos"
-            className="block p-1.5 rounded-full hover:bg-muted/50 dark:hover:bg-neutral-700/50 transition-colors text-yellow-500"
-          >
-            <FontAwesomeIcon icon={faLightbulb} size="xl" />
-          </a>
+
           {/* Separator */}
           <div className="w-full h-px bg-border dark:bg-neutral-700 my-1"></div>
           <button

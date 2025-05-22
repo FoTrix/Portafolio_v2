@@ -7,7 +7,6 @@ import tailwindcss from "@tailwindcss/vite";
 
 import react from "@astrojs/react";
 
-
 // https://astro.build/config
 export default defineConfig({
   vite: {
@@ -17,11 +16,11 @@ export default defineConfig({
     },
     envPrefix: "RESEND_",
   },
-  
+
   env: {
     schema: {
-      RESEND_API_KEY: envField.string({context: "server", access: "public"})
-    }
+      RESEND_API_KEY: envField.string({ context: "server", access: "public" }),
+    },
   },
 
   adapter: netlify(),
