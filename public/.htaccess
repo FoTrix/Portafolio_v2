@@ -1,0 +1,86 @@
+# Protección contra clonación y scraping
+
+# Prevenir listado de directorios
+Options -Indexes
+
+# Protección contra hotlinking (previene que otros sitios usen tus imágenes)
+RewriteEngine On
+RewriteCond %{HTTP_REFERER} !^$
+RewriteCond %{HTTP_REFERER} !^http(s)?://(www\.)?tudominio\.com [NC]
+RewriteCond %{HTTP_REFERER} !^http(s)?://(www\.)?google\.com [NC]
+RewriteCond %{HTTP_REFERER} !^http(s)?://(www\.)?bing\.com [NC]
+RewriteRule \.(jpg|jpeg|png|gif|svg)$ - [NC,F,L]
+
+# Bloquear acceso a archivos específicos
+<FilesMatch "\.(htaccess|htpasswd|ini|log|sh|inc|bak|env)$">
+Order Allow,Deny
+Deny from all
+</FilesMatch>
+
+# Bloquear bots maliciosos por User-Agent
+RewriteCond %{HTTP_USER_AGENT} ^.*(HTTrack|SiteSucker|WebCopier|Offline|Teleport|WebStripper|WebZIP|linko|Wget|YoudaoBot|Nutch|Scrapy|PhantomJS|Baiduspider).*$ [NC]
+RewriteRule .* - [F,L]
+
+# Bloquear solicitudes vacías de User-Agent
+RewriteCond %{HTTP_USER_AGENT} ^-?$
+RewriteRule .* - [F,L]
+
+# Limitar métodos HTTP permitidos
+<LimitExcept GET POST HEAD>
+Deny from all
+</LimitExcept>
+
+# Prevenir ataques de inyección
+RewriteCond %{QUERY_STRING} [\\\/%]\{[^\}\s]*\} [OR]
+RewriteCond %{QUERY_STRING} \.\./ [OR]
+RewriteCond %{QUERY_STRING} \.\.\$ [OR]
+RewriteCond %{QUERY_STRING} \.\.\s [OR]
+RewriteCond %{QUERY_STRING} \./\. [OR]
+RewriteCond %{QUERY_STRING} \(\) [OR]
+RewriteCond %{QUERY_STRING} \! [OR]
+RewriteCond %{QUERY_STRING} \' [OR]
+RewriteCond %{QUERY_STRING} \= [OR]
+RewriteCond %{QUERY_STRING} \\\-\- [OR]
+RewriteCond %{QUERY_STRING} \\\/ [OR]
+RewriteCond %{QUERY_STRING} \: [OR]
+RewriteCond %{QUERY_STRING} \[ [OR]
+RewriteCond %{QUERY_STRING} \] [OR]
+RewriteCond %{QUERY_STRING} \^ [OR]
+RewriteCond %{QUERY_STRING} \` [OR]
+RewriteCond %{QUERY_STRING} \{ [OR]
+RewriteCond %{QUERY_STRING} \} [OR]
+RewriteCond %{QUERY_STRING} \~ [OR]
+RewriteCond %{QUERY_STRING} \<.* [OR]
+RewriteCond %{QUERY_STRING} \>.* [OR]
+RewriteCond %{QUERY_STRING} [a-zA-Z0-9_]=http:// [OR]
+RewriteCond %{QUERY_STRING} [a-zA-Z0-9_]=(\.\.//?)+ [OR]
+RewriteCond %{QUERY_STRING} [a-zA-Z0-9_]=/([a-z0-9_.]//?)+ [NC]
+RewriteRule .* - [F,L]
+
+# Limitar la velocidad de solicitudes (prevenir scraping agresivo)
+# Requiere mod_ratelimit
+<IfModule mod_ratelimit.c>
+  # Limitar a 1000 KB/s
+  SetOutputFilter RATE_LIMIT
+  SetEnv rate-limit 1000
+</IfModule>
+
+# Forzar HTTPS
+RewriteCond %{HTTPS} off
+RewriteRule ^(.*)$ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
+
+# Añadir encabezados de seguridad adicionales
+<IfModule mod_headers.c>
+  # Prevenir clickjacking
+  Header always set X-Frame-Options "DENY"
+  # Prevenir MIME-sniffing
+  Header always set X-Content-Type-Options "nosniff"
+  # Habilitar protección XSS en navegadores antiguos
+  Header always set X-XSS-Protection "1; mode=block"
+  # Política de referencia
+  Header always set Referrer-Policy "strict-origin-when-cross-origin"
+  # Política de permisos
+  Header always set Permissions-Policy "camera=(), microphone=(), geolocation=(), autoplay=(), display-capture=(), document-domain=(), encrypted-media=(), fullscreen=(), payment=(), picture-in-picture=(), publickey-credentials-get=(), screen-wake-lock=(), sync-xhr=(), usb=(), web-share=(), xr-spatial-tracking=()"
+  # Prevenir cacheo
+  Header always set Cache-Control "no-store, max-age=0"
+</IfModule>
