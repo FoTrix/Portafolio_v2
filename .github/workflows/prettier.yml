@@ -8,6 +8,7 @@ on:
 
 permissions:
   contents: write
+  # workflows: write  # ❌ Este permiso no lo debes usar a menos que realmente quieras modificar workflows con el bot
 
 jobs:
   format:
@@ -17,7 +18,7 @@ jobs:
       - name: Checkout code
         uses: actions/checkout@v4
         with:
-          fetch-depth: 0  # necesario para git push
+          fetch-depth: 0
           ref: ${{ github.head_ref || github.ref }}
 
       - name: Setup Bun
@@ -51,6 +52,14 @@ jobs:
         run: |
           git config user.name "github-actions"
           git config user.email "github-actions@github.com"
+
+          # Evita modificar workflows para prevenir el error de permisos
+          git restore .github/workflows/prettier.yml
+
           git add -u
+          if git diff --cached --quiet; then
+            echo "No hay cambios para commitear"
+            exit 0
+          fi
           git commit -m "Auto-format code with Prettier"
           git push origin HEAD
