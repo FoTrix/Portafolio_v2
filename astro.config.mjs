@@ -26,9 +26,4 @@ export default defineConfig({
   adapter: netlify(),
   integrations: [icon(), react()],
   output: "server",
-  server: {
-    headers: {
-      "Content-Security-Policy": "frame-ancestors 'self'",
-    },
-  },
 });
